@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>查詢紀錄 — 醫療病歷 RAG</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f4f5;
+      color: #18181b;
+      min-height: 100vh;
+    }
+
+    .page-header {
+      background: #fff;
+      border-bottom: 1px solid #e4e4e7;
+      padding: 18px 32px 14px;
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+    }
+    .page-header h1 { font-size: 1.4rem; font-weight: 700; color: #1e1b4b; }
+    .back-link {
+      font-size: 0.82rem;
+      color: #6366f1;
+      text-decoration: none;
+      border: 1px solid #c7d2fe;
+      border-radius: 6px;
+      padding: 4px 10px;
+      margin-left: auto;
+    }
+    .back-link:hover { background: #eef2ff; }
+
+    .container {
+      max-width: 1200px;
+      margin: 24px auto;
+      padding: 0 24px;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .stat-card {
+      background: #fff;
+      border: 1px solid #e4e4e7;
+      border-radius: 10px;
+      padding: 14px 20px;
+      min-width: 140px;
+      text-align: center;
+    }
+    .stat-card .num { font-size: 1.8rem; font-weight: 700; color: #4f46e5; }
+    .stat-card .lbl { font-size: 0.78rem; color: #71717a; margin-top: 2px; }
+
+    .table-card {
+      background: #fff;
+      border: 1px solid #e4e4e7;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+    thead { background: #f5f3ff; }
+    th {
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+      color: #3730a3;
+      font-size: 0.8rem;
+      border-bottom: 1px solid #e4e4e7;
+      white-space: nowrap;
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #f4f4f5;
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #fafaf9; }
+
+    .query-cell { max-width: 340px; word-break: break-all; color: #27272a; }
+    .ts-cell { color: #71717a; font-size: 0.8rem; white-space: nowrap; }
+    .score-cell { text-align: center; font-weight: 600; color: #3f3f46; }
+
+    .badge {
+      display: inline-block;
+      border-radius: 5px;
+      padding: 2px 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-high   { background: #dcfce7; color: #15803d; }
+    .badge-medium { background: #fef9c3; color: #a16207; }
+    .badge-low    { background: #ffedd5; color: #c2410c; }
+    .badge-none   { background: #f4f4f5; color: #71717a; }
+
+    .flag-yes { color: #dc2626; font-weight: 600; }
+    .flag-no  { color: #71717a; }
+
+    .empty-msg {
+      text-align: center;
+      padding: 48px;
+      color: #a1a1aa;
+      font-size: 0.9rem;
+    }
+
+    /* 搜尋框 */
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+      align-items: center;
+    }
+    .search-input {
+      flex: 1;
+      max-width: 360px;
+      padding: 7px 12px;
+      border: 1px solid #d4d4d8;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-family: inherit;
+      outline: none;
+    }
+    .search-input:focus { border-color: #6366f1; box-shadow: 0 0 0 3px #e0e7ff; }
+    .count-label { font-size: 0.82rem; color: #71717a; }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>查詢紀錄</h1>
+  <a class="back-link" href="/">← 返回查詢</a>
+</div>
+
+<div class="container">
+
+  {% set total = entries | length %}
+  {% set high_count   = entries | selectattr('confidence','eq','HIGH')   | list | length %}
+  {% set medium_count = entries | selectattr('confidence','eq','MEDIUM') | list | length %}
+  {% set low_count    = entries | selectattr('confidence','eq','LOW')    | list | length %}
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="num">{{ total }}</div>
+      <div class="lbl">總查詢次數</div>
+    </div>
+    <div class="stat-card">
+      <div class="num" style="color:#15803d;">{{ high_count }}</div>
+      <div class="lbl">HIGH 信心</div>
+    </div>
+    <div class="stat-card">
+      <div class="num" style="color:#a16207;">{{ medium_count }}</div>
+      <div class="lbl">MEDIUM 信心</div>
+    </div>
+    <div class="stat-card">
+      <div class="num" style="color:#c2410c;">{{ low_count }}</div>
+      <div class="lbl">LOW 信心</div>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <input class="search-input" type="text" id="searchInput"
+           placeholder="搜尋查詢內容..." oninput="filterTable()" />
+    <span class="count-label" id="countLabel">共 {{ total }} 筆</span>
+  </div>
+
+  <div class="table-card">
+    {% if entries %}
+    <table id="logTable">
+      <thead>
+        <tr>
+          <th>時間</th>
+          <th>查詢內容</th>
+          <th>信心等級</th>
+          <th>最高相似度</th>
+          <th>警示數</th>
+          <th>需人工確認</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for e in entries %}
+        <tr>
+          <td class="ts-cell">{{ e.timestamp }}</td>
+          <td class="query-cell">{{ e.query }}</td>
+          <td>
+            {% if e.confidence == 'HIGH' %}
+              <span class="badge badge-high">HIGH</span>
+            {% elif e.confidence == 'MEDIUM' %}
+              <span class="badge badge-medium">MEDIUM</span>
+            {% elif e.confidence == 'LOW' %}
+              <span class="badge badge-low">LOW</span>
+            {% else %}
+              <span class="badge badge-none">—</span>
+            {% endif %}
+          </td>
+          <td class="score-cell">
+            {% if e.retrieval_score %}
+              {{ "%.1f"|format(e.retrieval_score * 100) }}%
+            {% else %}—{% endif %}
+          </td>
+          <td class="score-cell">{{ e.warnings_count }}</td>
+          <td>
+            {% if e.requires_review %}
+              <span class="flag-yes">是</span>
+            {% else %}
+              <span class="flag-no">否</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <div class="empty-msg">尚無查詢紀錄</div>
+    {% endif %}
+  </div>
+
+</div>
+
+<script>
+  function filterTable() {
+    const keyword = document.getElementById('searchInput').value.toLowerCase();
+    const rows = document.querySelectorAll('#logTable tbody tr');
+    let visible = 0;
+    rows.forEach(row => {
+      const text = row.querySelector('.query-cell')?.textContent.toLowerCase() ?? '';
+      const show = text.includes(keyword);
+      row.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    document.getElementById('countLabel').textContent =
+      keyword ? `顯示 ${visible} / {{ total }} 筆` : `共 {{ total }} 筆`;
+  }
+</script>
+
+</body>
+</html>

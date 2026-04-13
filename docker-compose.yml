@@ -1,0 +1,58 @@
+name: medical-rag
+
+services:
+
+  ollama:
+    image: ollama/ollama
+    container_name: medical_rag_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama    # 模型快取，重啟不用重新下載
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  ollama-setup:
+    image: ollama/ollama
+    container_name: medical_rag_ollama_setup
+    depends_on:
+      ollama:
+        condition: service_healthy
+    volumes:
+      - ollama_data:/root/.ollama
+    entrypoint: >
+      sh -c "
+        ollama pull llama3.2 &&
+        echo '模型下載完成'
+      "
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    restart: "no"                    # 只執行一次，不重啟
+
+  rag-app:
+    build: .
+    container_name: medical_rag_app
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./data:/app/data             # 資料目錄掛載，索引和 log 持久化
+    environment:
+      - USE_OLLAMA=1
+      - OLLAMA_URL=http://ollama:11434
+      - OLLAMA_MODEL=llama3.2
+    depends_on:
+      ollama:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7860/"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  ollama_data:                       # 模型快取 volume，跨重啟保留

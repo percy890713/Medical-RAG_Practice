@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# 虛擬環境
+venv/
+env/
+
+# FAISS 索引（本地建立，不上傳）
+data/faiss_index/
+
+# 查詢紀錄（本地 log，不上傳）
+data/query_log.jsonl
+
+# 環境變數
+.env
+
+# Docker build cache
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

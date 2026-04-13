@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>醫療病歷輔助查詢系統</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f4f5;
+      color: #18181b;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      background: #fff;
+      border-bottom: 1px solid #e4e4e7;
+      padding: 18px 32px 14px;
+    }
+    .page-header h1 { font-size: 1.6rem; font-weight: 700; color: #1e1b4b; }
+    .page-header p  { margin-top: 4px; font-size: 0.9rem; color: #52525b; }
+    .header-nav { float: right; margin-top: 6px; }
+    .header-nav a {
+      font-size: 0.82rem; color: #6366f1; text-decoration: none;
+      border: 1px solid #c7d2fe; border-radius: 6px; padding: 4px 10px;
+    }
+    .header-nav a:hover { background: #eef2ff; }
+
+    /* ── Layout ── */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      max-width: 1280px;
+      margin: 24px auto;
+      padding: 0 24px;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e4e4e7;
+      padding: 18px 20px;
+    }
+
+    /* ── Label chip ── */
+    .label-chip {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #3730a3;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      border-radius: 6px;
+      padding: 2px 10px;
+      margin-bottom: 10px;
+    }
+
+    /* ── Textarea ── */
+    textarea {
+      width: 100%;
+      resize: vertical;
+      min-height: 110px;
+      padding: 10px 12px;
+      border: 1px solid #d4d4d8;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-family: inherit;
+      line-height: 1.5;
+      outline: none;
+      transition: border-color .15s;
+    }
+    textarea:focus { border-color: #6366f1; box-shadow: 0 0 0 3px #e0e7ff; }
+
+    /* ── Button ── */
+    .btn-primary {
+      display: block;
+      width: 100%;
+      margin-top: 12px;
+      padding: 10px;
+      background: #4f46e5;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .btn-primary:hover:not(:disabled) { background: #4338ca; }
+    .btn-primary:disabled { background: #a5b4fc; cursor: not-allowed; }
+
+    /* ── Examples ── */
+    .examples-title {
+      margin-top: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #52525b;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .examples-title::before { content: "≡"; font-size: 1rem; }
+    .example-item {
+      margin-top: 6px;
+      font-size: 0.82rem;
+      color: #3730a3;
+      background: #f5f3ff;
+      border: 1px solid #ddd6fe;
+      border-radius: 6px;
+      padding: 6px 10px;
+      cursor: pointer;
+      line-height: 1.4;
+      transition: background .12s;
+    }
+    .example-item:hover { background: #ede9fe; }
+
+    /* ── Right panel ── */
+    .right-col { display: flex; flex-direction: column; gap: 16px; }
+
+    /* ── Confidence ── */
+    .confidence-value {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      min-height: 28px;
+      color: #3f3f46;
+    }
+    .dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot-high   { background: #22c55e; }
+    .dot-medium { background: #eab308; }
+    .dot-low    { background: #f97316; }
+    .dot-empty  { background: #d4d4d8; }
+
+    /* ── Answer ── */
+    .answer-body {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #27272a;
+      min-height: 40px;
+    }
+    .answer-body p   { margin-bottom: 0.6em; }
+    .answer-body ol,
+    .answer-body ul  { padding-left: 1.4em; margin-bottom: 0.6em; }
+    .answer-body li  { margin-bottom: 0.3em; }
+    .answer-body strong { color: #1e1b4b; }
+
+    /* ── Accordion ── */
+    .accordion-btn {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #3730a3;
+    }
+    .accordion-btn .arrow { transition: transform .2s; font-style: normal; }
+    .accordion-btn.open .arrow { transform: rotate(180deg); }
+    .accordion-content { margin-top: 14px; display: none; }
+    .accordion-content.open { display: block; }
+
+    .case-block {
+      border-left: 3px solid #c7d2fe;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      background: #fafafa;
+      border-radius: 0 8px 8px 0;
+    }
+    .case-block:last-child { margin-bottom: 0; }
+    .case-header {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #3730a3;
+      margin-bottom: 8px;
+    }
+    .case-section-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #52525b;
+      margin: 8px 0 4px;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .case-text { font-size: 0.85rem; line-height: 1.6; color: #3f3f46; }
+
+    /* ── Warnings ── */
+    .warning-list { display: flex; flex-direction: column; gap: 8px; }
+    .warning-item {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 0.85rem;
+      color: #92400e;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 6px;
+      padding: 8px 10px;
+    }
+    .warning-item::before { content: "▲"; color: #d97706; flex-shrink: 0; }
+
+    /* ── Disclaimer ── */
+    .disclaimer {
+      font-size: 0.8rem;
+      color: #71717a;
+      line-height: 1.5;
+      padding-top: 4px;
+      border-top: 1px dashed #e4e4e7;
+    }
+
+    /* ── Spinner ── */
+    .spinner {
+      display: inline-block;
+      width: 16px; height: 16px;
+      border: 2px solid #c7d2fe;
+      border-top-color: #6366f1;
+      border-radius: 50%;
+      animation: spin .6s linear infinite;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Error ── */
+    .error-msg {
+      color: #b91c1c;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="header-nav"><a href="/logs">查詢紀錄</a></div>
+  <h1>醫療病歷輔助查詢系統</h1>
+  <p>輸入症狀描述，系統將從歷史病例中找出相似案例，提供診斷方向與治療參考。</p>
+</div>
+
+<div class="main-grid">
+
+  <!-- ── 左欄 ── -->
+  <div>
+    <div class="card">
+      <span class="label-chip">症狀描述</span>
+      <textarea id="queryInput" placeholder="請輸入症狀、病史、檢查結果等資訊..."></textarea>
+      <button class="btn-primary" id="submitBtn" onclick="runQuery()">查詢</button>
+    </div>
+
+    <div style="margin-top:16px;">
+      <div class="examples-title">範例查詢</div>
+      {% for ex in examples %}
+      <div class="example-item" onclick="fillExample(this)">{{ ex }}</div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- ── 右欄 ── -->
+  <div class="right-col">
+
+    <!-- 信心等級 -->
+    <div class="card">
+      <span class="label-chip">信心等級</span>
+      <div class="confidence-value" id="confidenceDisplay">
+        <span class="dot dot-empty"></span>
+        <span id="confidenceText">—</span>
+      </div>
+    </div>
+
+    <!-- 主要回答 -->
+    <div class="card">
+      <div class="answer-body" id="answerBody"></div>
+    </div>
+
+    <!-- 相似病例來源 -->
+    <div class="card" id="casesCard" style="display:none;">
+      <button class="accordion-btn" id="accordionBtn" onclick="toggleAccordion()">
+        <span>相似病例來源</span>
+        <i class="arrow">▼</i>
+      </button>
+      <div class="accordion-content" id="accordionContent"></div>
+    </div>
+
+    <!-- 警示訊息 -->
+    <div class="card" id="warningsCard" style="display:none;">
+      <span class="label-chip" style="background:#fef3c7;border-color:#fde68a;color:#92400e;">警示訊息</span>
+      <div class="warning-list" id="warningsList"></div>
+    </div>
+
+    <!-- 免責聲明 -->
+    <div class="card">
+      <p class="disclaimer">
+        <strong>免責聲明</strong>：本系統提供的資訊僅供醫療專業人員參考，
+        不構成正式診斷或治療建議。所有臨床決策須由具執照之執業醫師判斷。
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function fillExample(el) {
+    document.getElementById('queryInput').value = el.textContent.trim();
+  }
+
+  document.getElementById('queryInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) runQuery();
+  });
+
+  const CONFIDENCE_MAP = {
+    HIGH:   { label: 'HIGH（高可信度）',          dotClass: 'dot-high' },
+    MEDIUM: { label: 'MEDIUM（中可信度，請謹慎參考）', dotClass: 'dot-medium' },
+    LOW:    { label: 'LOW（低可信度，建議人工確認）',  dotClass: 'dot-low' },
+  };
+
+  async function runQuery() {
+    const query = document.getElementById('queryInput').value.trim();
+    if (!query) return;
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span>查詢中...';
+
+    // 清空舊結果
+    setConfidence('');
+    document.getElementById('answerBody').innerHTML = '';
+    document.getElementById('casesCard').style.display = 'none';
+    document.getElementById('warningsCard').style.display = 'none';
+
+    try {
+      const res = await fetch('/query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        document.getElementById('answerBody').innerHTML =
+          `<div class="error-msg">${escHtml(data.error || '未知錯誤')}</div>`;
+        return;
+      }
+
+      setConfidence(data.confidence);
+      document.getElementById('answerBody').innerHTML =
+        marked.parse(data.answer || '');
+      renderCases(data.retrieved_cases || []);
+      renderWarnings(data.warnings || []);
+
+    } catch (err) {
+      document.getElementById('answerBody').innerHTML =
+        `<div class="error-msg">網路錯誤：${escHtml(err.message)}</div>`;
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '查詢';
+    }
+  }
+
+  function setConfidence(level) {
+    const dot  = document.querySelector('.confidence-value .dot');
+    const text = document.getElementById('confidenceText');
+    dot.className = 'dot ' + (CONFIDENCE_MAP[level]?.dotClass ?? 'dot-empty');
+    text.textContent = CONFIDENCE_MAP[level]?.label ?? '—';
+  }
+
+  function renderCases(cases) {
+    if (!cases.length) return;
+    const card    = document.getElementById('casesCard');
+    const content = document.getElementById('accordionContent');
+    card.style.display = '';
+    content.innerHTML = cases.map(c => `
+      <div class="case-block">
+        <div class="case-header">
+          #${c.rank}
+          　FAISS：${c.score}
+          ${c.rerank_score !== null ? `　重排分數：${c.rerank_score}` : ''}
+          ${c.meta ? `（${escHtml(c.meta)}）` : ''}
+        </div>
+        ${c.summary ? `
+          <div class="case-section-title">症狀與診斷</div>
+          <div class="case-text">${escHtml(c.summary)}</div>` : ''}
+        ${c.context ? `
+          <div class="case-section-title">治療計畫與結果</div>
+          <div class="case-text">${escHtml(c.context)}</div>` : ''}
+      </div>`).join('');
+  }
+
+  function renderWarnings(warnings) {
+    if (!warnings.length) return;
+    const card = document.getElementById('warningsCard');
+    const list = document.getElementById('warningsList');
+    card.style.display = '';
+    list.innerHTML = warnings.map(w =>
+      `<div class="warning-item">${escHtml(w)}</div>`
+    ).join('');
+  }
+
+  function toggleAccordion() {
+    const btn     = document.getElementById('accordionBtn');
+    const content = document.getElementById('accordionContent');
+    btn.classList.toggle('open');
+    content.classList.toggle('open');
+  }
+
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,1598 @@
+[
+  {
+    "record_id": "MR-2024-001",
+    "patient": {
+      "name": "陳志明",
+      "id": "A123456789",
+      "dob": "1965-03-12",
+      "phone": "0912-345-678",
+      "address": "台中市西屯區文心路二段123號",
+      "emergency_contact": "陳美華 (妻) 0933-111-222"
+    },
+    "visit_date": "2024-01-15",
+    "department": "心臟內科",
+    "chief_complaint": "胸痛、呼吸困難、心悸，持續約2小時",
+    "hpi": "65歲男性，有高血壓病史10年，糖尿病5年。今日凌晨3點突發性胸骨後壓迫感，放射至左肩，伴隨冷汗、噁心。由救護車送至急診。",
+    "pmh": ["高血壓", "第二型糖尿病", "高血脂"],
+    "medications": [
+      {"name": "Amlodipine", "dose": "5mg", "frequency": "QD"},
+      {"name": "Metformin", "dose": "500mg", "frequency": "BID"},
+      {"name": "Atorvastatin", "dose": "20mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "165/95 mmHg", "hr": "98 bpm", "rr": "22/min", "temp": "36.8°C", "spo2": "94%"},
+    "labs": {
+      "troponin_I": "2.8 ng/mL (↑)",
+      "CK_MB": "45 U/L (↑)",
+      "BNP": "320 pg/mL (↑)",
+      "glucose": "215 mg/dL (↑)",
+      "HbA1c": "8.2%"
+    },
+    "imaging": "心電圖：V1-V4 ST elevation，符合前壁STEMI。胸部X光：輕度肺水腫。",
+    "assessment": "急性前壁心肌梗塞 (STEMI)",
+    "plan": "立即安排心導管手術，PCI介入治療。給予Aspirin 300mg loading、Heparin IV、Nitroglycerin SL。術後加入Clopidogrel 75mg QD。加護病房觀察72小時。",
+    "outcome": "PCI成功，LAD近端100%阻塞，置入藥物塗層支架1枚。術後EF 45%，穩定出院。",
+    "follow_up": "2週後門診追蹤，心臟復健計畫。"
+  },
+  {
+    "record_id": "MR-2024-002",
+    "patient": {
+      "name": "林淑芬",
+      "id": "B234567890",
+      "dob": "1978-07-22",
+      "phone": "0922-456-789",
+      "address": "台中市北區三民路三段456號",
+      "emergency_contact": "林建國 (夫) 0955-333-444"
+    },
+    "visit_date": "2024-01-18",
+    "department": "神經內科",
+    "chief_complaint": "突發性劇烈頭痛、頸部僵硬、畏光",
+    "hpi": "46歲女性，無特殊病史。今日上午突然發生「有生以來最嚴重的頭痛」，伴隨頸部僵硬、畏光、輕微發燒。否認外傷史。",
+    "pmh": ["偏頭痛（輕度）"],
+    "medications": [
+      {"name": "Ibuprofen", "dose": "400mg", "frequency": "PRN"}
+    ],
+    "vitals": {"bp": "148/88 mmHg", "hr": "102 bpm", "rr": "18/min", "temp": "38.3°C", "spo2": "98%"},
+    "labs": {
+      "WBC": "16,500/μL (↑)",
+      "CRP": "85 mg/L (↑)",
+      "CSF_appearance": "混濁",
+      "CSF_WBC": "1200/μL (↑)",
+      "CSF_protein": "180 mg/dL (↑)",
+      "CSF_glucose": "35 mg/dL (↓)"
+    },
+    "imaging": "頭部CT：未見出血或佔位效應。MRI：腦膜強化訊號。",
+    "assessment": "細菌性腦膜炎",
+    "plan": "立即給予Ceftriaxone 2g IV Q12H、Dexamethasone 0.15mg/kg Q6H。隔離措施。神經科加護病房。血液及腦脊髓液培養。",
+    "outcome": "CSF培養：肺炎鏈球菌陽性。抗生素調整為Penicillin G。治療14天後症狀改善，無明顯後遺症。",
+    "follow_up": "出院後1個月神經科門診，聽力測試追蹤。"
+  },
+  {
+    "record_id": "MR-2024-003",
+    "patient": {
+      "name": "黃俊傑",
+      "id": "C345678901",
+      "dob": "1990-11-05",
+      "phone": "0966-567-890",
+      "address": "台中市南區建國路一段789號",
+      "emergency_contact": "黃母 王秀蘭 0977-555-666"
+    },
+    "visit_date": "2024-01-22",
+    "department": "胸腔內科",
+    "chief_complaint": "發燒、咳嗽有痰、右側胸痛3天",
+    "hpi": "34歲男性，有吸菸史（1包/天×10年）。3天前開始發燒38.5°C、咳嗽伴黃綠色痰液、右側胸部刺痛（深呼吸時加劇）。",
+    "pmh": ["無"],
+    "medications": [],
+    "vitals": {"bp": "122/78 mmHg", "hr": "110 bpm", "rr": "24/min", "temp": "38.9°C", "spo2": "92%"},
+    "labs": {
+      "WBC": "18,200/μL (↑)",
+      "CRP": "125 mg/L (↑)",
+      "procalcitonin": "2.1 ng/mL (↑)",
+      "sputum_culture": "待回報"
+    },
+    "imaging": "胸部X光：右下肺葉浸潤影，右側肋膈角鈍化（少量肋膜積液）。",
+    "assessment": "社區型肺炎（右下肺葉），併發肋膜積液",
+    "plan": "住院治療。Ceftriaxone 2g IV QD + Azithromycin 500mg IV QD。氧氣治療（鼻管3L/min）。水分補充。若積液增加考慮胸腔穿刺。",
+    "outcome": "痰液培養：肺炎鏈球菌。抗生素有效，5天後退燒，7天後出院。積液自行吸收。",
+    "follow_up": "2週後胸部X光複查，戒菸諮詢。"
+  },
+  {
+    "record_id": "MR-2024-004",
+    "patient": {
+      "name": "王美玲",
+      "id": "D456789012",
+      "dob": "1955-04-18",
+      "phone": "0988-678-901",
+      "address": "台中市東區自由路二段321號",
+      "emergency_contact": "王大明 (子) 0911-777-888"
+    },
+    "visit_date": "2024-02-03",
+    "department": "內分泌科",
+    "chief_complaint": "多尿、多飲、體重下降、疲倦，持續1個月",
+    "hpi": "69歲女性，家族有糖尿病史。近1個月頻繁排尿（夜尿3-4次）、持續口渴、體重下降約5kg、全身疲倦無力。",
+    "pmh": ["高血壓"],
+    "medications": [
+      {"name": "Losartan", "dose": "50mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "145/90 mmHg", "hr": "88 bpm", "rr": "16/min", "temp": "36.5°C", "spo2": "98%"},
+    "labs": {
+      "fasting_glucose": "285 mg/dL (↑)",
+      "HbA1c": "11.3% (↑)",
+      "C_peptide": "0.8 ng/mL (↓)",
+      "urine_glucose": "4+",
+      "urine_ketone": "1+",
+      "creatinine": "1.1 mg/dL"
+    },
+    "imaging": "腹部超音波：胰臟無異常。",
+    "assessment": "新診斷第二型糖尿病，血糖控制不良",
+    "plan": "Metformin 500mg BID（飯後），逐漸調整劑量。糖尿病衛教。飲食控制及規律運動建議。自我血糖監測指導（目標空腹<130, 飯後2hr<180）。",
+    "outcome": "3個月後回診HbA1c降至8.1%，空腹血糖185 mg/dL，持續調藥中。",
+    "follow_up": "每3個月門診追蹤，每6個月眼科及足部檢查。"
+  },
+  {
+    "record_id": "MR-2024-005",
+    "patient": {
+      "name": "李建宏",
+      "id": "E567890123",
+      "dob": "1982-09-30",
+      "phone": "0977-789-012",
+      "address": "台中市大里區中興路一段654號",
+      "emergency_contact": "李淑華 (妻) 0944-999-000"
+    },
+    "visit_date": "2024-02-10",
+    "department": "腸胃科",
+    "chief_complaint": "上腹痛、黑便、頭暈2天",
+    "hpi": "42歲男性，長期服用NSAIDs止痛藥（關節炎）。2天前開始上腹燒灼感加劇、解黑色糊狀便，今日頭暈、心悸。",
+    "pmh": ["退化性關節炎", "消化性潰瘍病史（5年前）"],
+    "medications": [
+      {"name": "Diclofenac", "dose": "75mg", "frequency": "BID"},
+      {"name": "Pantoprazole", "dose": "40mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "95/60 mmHg", "hr": "118 bpm", "rr": "20/min", "temp": "36.6°C", "spo2": "97%"},
+    "labs": {
+      "Hb": "7.2 g/dL (↓)",
+      "MCV": "72 fL (↓)",
+      "platelet": "285,000/μL",
+      "BUN": "45 mg/dL (↑)",
+      "creatinine": "0.9 mg/dL",
+      "PT": "12.5 sec"
+    },
+    "imaging": "胃鏡：十二指腸球部後壁潰瘍（1.5cm），伴活動性出血（Forrest Ia）。",
+    "assessment": "消化性潰瘍出血（十二指腸潰瘍），出血性休克前期",
+    "plan": "禁食。IV fluid resuscitation（Normal saline）。輸血2單位pRBC。Pantoprazole 80mg IV bolus後40mg/hr持續輸注48小時。胃鏡止血（電凝燒灼術）。停用NSAIDs，轉介疼痛科評估替代治療。",
+    "outcome": "胃鏡止血成功，無再出血。血色素回升至10.5 g/dL。改為口服PPI後出院。",
+    "follow_up": "6-8週後胃鏡複查，H. pylori檢測及根除治療。"
+  },
+  {
+    "record_id": "MR-2024-006",
+    "patient": {
+      "name": "張雅婷",
+      "id": "F678901234",
+      "dob": "1995-06-14",
+      "phone": "0933-890-123",
+      "address": "台中市西區五權路456號",
+      "emergency_contact": "張建民 (父) 0966-111-222"
+    },
+    "visit_date": "2024-02-15",
+    "department": "皮膚科",
+    "chief_complaint": "全身蕁麻疹、嘴唇腫脹、呼吸困難",
+    "hpi": "29歲女性，無藥物過敏史。1小時前服用Amoxicillin（牙科處方）後出現全身紅疹、嘴唇及眼皮腫脹、喉嚨緊縮感、呼吸困難。",
+    "pmh": ["無"],
+    "medications": [
+      {"name": "Amoxicillin", "dose": "500mg", "frequency": "TID（剛開始服用）"}
+    ],
+    "vitals": {"bp": "88/55 mmHg", "hr": "128 bpm", "rr": "26/min", "temp": "36.9°C", "spo2": "91%"},
+    "labs": {
+      "tryptase": "25 μg/L (↑)",
+      "IgE": "420 IU/mL (↑)",
+      "eosinophil": "8% (↑)"
+    },
+    "imaging": "無",
+    "assessment": "急性過敏反應（Anaphylaxis），青黴素類抗生素過敏",
+    "plan": "Epinephrine 0.3mg IM（大腿外側）立即給予。IV access建立。Diphenhydramine 50mg IV。Methylprednisolone 125mg IV。Salbutamol nebulization。觀察至少6小時。",
+    "outcome": "Epinephrine注射後15分鐘症狀明顯改善。血壓回升至115/75 mmHg，SpO2 98%。觀察6小時穩定後出院。",
+    "follow_up": "過敏科就診，進行過敏原測試。青黴素類（Penicillin/Amoxicillin/Ampicillin）列為禁忌藥物。建議攜帶自動注射式Epinephrine。"
+  },
+  {
+    "record_id": "MR-2024-007",
+    "patient": {
+      "name": "吳明哲",
+      "id": "G789012345",
+      "dob": "1970-12-01",
+      "phone": "0955-901-234",
+      "address": "台中市豐原區中正路二段987號",
+      "emergency_contact": "吳秀英 (妻) 0922-333-444"
+    },
+    "visit_date": "2024-02-20",
+    "department": "腎臟科",
+    "chief_complaint": "雙下肢水腫、尿量減少、疲倦",
+    "hpi": "54歲男性，有長期高血壓及痛風病史，長期自行服用消炎止痛藥。近3個月雙腳踝漸進性水腫，尿量明顯減少，全身疲倦。",
+    "pmh": ["高血壓", "痛風", "長期NSAIDs使用"],
+    "medications": [
+      {"name": "Amlodipine", "dose": "10mg", "frequency": "QD"},
+      {"name": "Allopurinol", "dose": "100mg", "frequency": "QD"},
+      {"name": "Indomethacin", "dose": "25mg", "frequency": "TID（自行使用）"}
+    ],
+    "vitals": {"bp": "168/105 mmHg", "hr": "82 bpm", "rr": "18/min", "temp": "36.7°C", "spo2": "97%"},
+    "labs": {
+      "creatinine": "4.2 mg/dL (↑)",
+      "BUN": "68 mg/dL (↑)",
+      "eGFR": "15 mL/min/1.73m²",
+      "K": "5.8 mEq/L (↑)",
+      "urine_protein": "3+",
+      "urine_protein_creatinine_ratio": "3500 mg/g (↑)",
+      "Hb": "8.5 g/dL (↓)"
+    },
+    "imaging": "腎臟超音波：雙側腎臟縮小（右8.5cm，左8.2cm），皮質回音增強。",
+    "assessment": "慢性腎臟病第五期（CKD Stage 5），NSAIDs腎毒性加速惡化，腎性貧血",
+    "plan": "立即停用所有NSAIDs。飲食限制（低鉀、低磷、低蛋白）。血壓控制加強。Erythropoietin注射。腎臟替代療法評估（血液透析）。腎臟科住院。",
+    "outcome": "住院期間腎功能部分改善（creatinine降至3.5 mg/dL）。評估後建議準備透析通路（動靜脈廔管）。",
+    "follow_up": "每2週腎臟科追蹤，透析準備中。"
+  },
+  {
+    "record_id": "MR-2024-008",
+    "patient": {
+      "name": "劉芳如",
+      "id": "H890123456",
+      "dob": "1988-03-27",
+      "phone": "0911-012-345",
+      "address": "台中市烏日區中山路三段147號",
+      "emergency_contact": "劉父 劉建國 0988-555-666"
+    },
+    "visit_date": "2024-03-05",
+    "department": "婦產科",
+    "chief_complaint": "下腹劇痛、陰道出血、頭暈",
+    "hpi": "36歲女性，LMP 6週前，尿液妊娠試驗陽性。突發性右下腹劇烈疼痛，少量陰道出血，頭暈目眩。",
+    "pmh": ["骨盆腔炎病史（3年前）"],
+    "medications": [],
+    "vitals": {"bp": "90/58 mmHg", "hr": "132 bpm", "rr": "22/min", "temp": "36.5°C", "spo2": "97%"},
+    "labs": {
+      "hCG": "4500 mIU/mL",
+      "Hb": "9.8 g/dL (↓)",
+      "type_and_crossmatch": "B+",
+      "PT": "11.8 sec",
+      "APTT": "28 sec"
+    },
+    "imaging": "陰道超音波：子宮腔內無孕囊，右側輸卵管見不均質腫塊（2.8×2.5cm），Douglas氏腔積液。",
+    "assessment": "右側輸卵管異位妊娠，腹腔內出血，失血性休克",
+    "plan": "緊急手術。IV fluid及輸血準備。剖腹探查術（腹腔鏡）。右側輸卵管切除術。術前同意書。",
+    "outcome": "腹腔鏡手術成功，右側輸卵管破裂，腹腔積血約800mL。輸卵管切除。輸血2單位。術後穩定。",
+    "follow_up": "術後1週門診，血清hCG追蹤至正常，諮詢未來生育計畫。"
+  },
+  {
+    "record_id": "MR-2024-009",
+    "patient": {
+      "name": "蔡志豪",
+      "id": "I901234567",
+      "dob": "1958-08-19",
+      "phone": "0944-123-456",
+      "address": "台中市霧峰區中正路456號",
+      "emergency_contact": "蔡秀蘭 (妻) 0933-777-888"
+    },
+    "visit_date": "2024-03-12",
+    "department": "骨科",
+    "chief_complaint": "右髖部疼痛、無法行走（跌倒後）",
+    "hpi": "66歲男性，有骨質疏鬆症及輕度失智症。今日在浴室滑倒，當下右髖部劇烈疼痛，無法站立。",
+    "pmh": ["骨質疏鬆症", "輕度阿茲海默症", "高血壓"],
+    "medications": [
+      {"name": "Alendronate", "dose": "70mg", "frequency": "QW"},
+      {"name": "Donepezil", "dose": "5mg", "frequency": "QD"},
+      {"name": "Olmesartan", "dose": "20mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "138/85 mmHg", "hr": "90 bpm", "rr": "16/min", "temp": "36.8°C", "spo2": "97%"},
+    "labs": {
+      "Hb": "11.2 g/dL",
+      "calcium": "8.8 mg/dL",
+      "vitamin_D": "18 ng/mL (↓)",
+      "albumin": "3.5 g/dL"
+    },
+    "imaging": "右髖部X光：右股骨頸骨折（Garden Type III），明顯移位。DXA：T-score -3.2（嚴重骨質疏鬆）。",
+    "assessment": "右股骨頸骨折（骨質疏鬆性），嚴重骨質疏鬆症",
+    "plan": "手術治療：人工半髖關節置換術（Hemiarthroplasty）。術前評估。Vitamin D 800IU + Calcium 1000mg補充。術後積極復健。跌倒預防措施。",
+    "outcome": "手術順利，術後第2天開始站立復健，第5天可扶助行器行走。出院後轉介復健科。",
+    "follow_up": "術後6週、3個月、1年骨科追蹤。骨質疏鬆藥物調整（考慮Zoledronic acid注射）。"
+  },
+  {
+    "record_id": "MR-2024-010",
+    "patient": {
+      "name": "鄭淑惠",
+      "id": "J012345678",
+      "dob": "1972-05-08",
+      "phone": "0977-234-567",
+      "address": "台中市梧棲區中央路二段258號",
+      "emergency_contact": "鄭建平 (夫) 0966-999-000"
+    },
+    "visit_date": "2024-03-18",
+    "department": "風濕免疫科",
+    "chief_complaint": "雙手關節腫痛、晨間僵硬超過1小時",
+    "hpi": "52歲女性，近6個月雙手指間關節及掌指關節對稱性腫脹疼痛，晨起僵硬持續約2小時，疲倦感明顯，偶有低燒。",
+    "pmh": ["甲狀腺機能低下"],
+    "medications": [
+      {"name": "Levothyroxine", "dose": "50mcg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "125/80 mmHg", "hr": "76 bpm", "rr": "15/min", "temp": "37.2°C", "spo2": "99%"},
+    "labs": {
+      "RF": "128 IU/mL (↑)",
+      "anti_CCP": "245 U/mL (↑)",
+      "ESR": "78 mm/hr (↑)",
+      "CRP": "45 mg/L (↑)",
+      "ANA": "1:160 speckled",
+      "CBC": "輕度貧血 Hb 10.8 g/dL"
+    },
+    "imaging": "雙手X光：多處近端指間關節及掌指關節關節縫隙狹窄，早期骨侵蝕。關節超音波：滑膜炎及血管翳形成。",
+    "assessment": "類風濕性關節炎（早期，DAS28評分5.2，中高度活性）",
+    "plan": "Methotrexate 7.5mg QW（逐漸加量至15mg）。Folic acid 1mg QD。NSAIDs短期使用。低劑量Prednisolone 5mg QD（橋接治療）。定期肝功能及血球監測。",
+    "outcome": "3個月後DAS28降至3.8，關節腫脹明顯改善。Prednisolone逐步減量。",
+    "follow_up": "每3個月追蹤，評估是否需加入生物製劑。"
+  },
+  {
+    "record_id": "MR-2024-011",
+    "patient": {
+      "name": "許文雄",
+      "id": "K123456780",
+      "dob": "1963-02-14",
+      "phone": "0988-345-678",
+      "address": "台中市清水區中山路一段369號",
+      "emergency_contact": "許秀美 (妻) 0977-111-222"
+    },
+    "visit_date": "2024-03-25",
+    "department": "泌尿科",
+    "chief_complaint": "排尿困難、尿流細弱、夜尿頻繁",
+    "hpi": "61歲男性，近2年漸進性排尿困難，尿流細弱，排尿後殘尿感，夜尿4-5次，IPSS評分24分（重度）。",
+    "pmh": ["高血壓", "高血脂"],
+    "medications": [
+      {"name": "Amlodipine", "dose": "5mg", "frequency": "QD"},
+      {"name": "Rosuvastatin", "dose": "10mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "142/88 mmHg", "hr": "78 bpm", "rr": "15/min", "temp": "36.6°C", "spo2": "98%"},
+    "labs": {
+      "PSA": "4.8 ng/mL",
+      "free_PSA_ratio": "18%",
+      "creatinine": "1.2 mg/dL",
+      "urine_analysis": "正常"
+    },
+    "imaging": "攝護腺超音波：攝護腺體積68mL（肥大），無結節。膀胱殘尿量：185mL。尿流速：Qmax 7.2 mL/sec。",
+    "assessment": "良性攝護腺增生（BPH）重度，膀胱出口阻塞",
+    "plan": "Tamsulosin 0.4mg QD（α-blocker）。Dutasteride 0.5mg QD（5α-reductase inhibitor）。若3-6個月藥物治療效果不佳考慮TURP手術。PSA追蹤及攝護腺切片評估必要性。",
+    "outcome": "3個月後IPSS改善至16分，Qmax提升至12 mL/sec，繼續藥物治療。",
+    "follow_up": "每6個月追蹤PSA及超音波。"
+  },
+  {
+    "record_id": "MR-2024-012",
+    "patient": {
+      "name": "陳秀鳳",
+      "id": "L234567801",
+      "dob": "1980-10-23",
+      "phone": "0911-456-789",
+      "address": "台中市后里區中山路二段741號",
+      "emergency_contact": "陳大偉 (夫) 0955-333-444"
+    },
+    "visit_date": "2024-04-02",
+    "department": "精神科",
+    "chief_complaint": "情緒低落、失眠、食慾不振、無故哭泣，持續3個月",
+    "hpi": "44歲女性，近3個月情緒持續低落，興趣喪失，失眠（早醒），食慾差體重減輕4kg，注意力難以集中，有無望感，偶有消極念頭但無具體計畫。",
+    "pmh": ["無"],
+    "medications": [],
+    "vitals": {"bp": "118/75 mmHg", "hr": "72 bpm", "rr": "14/min", "temp": "36.5°C", "spo2": "99%"},
+    "labs": {
+      "TSH": "2.1 mIU/L（正常）",
+      "CBC": "正常",
+      "vitamin_B12": "280 pg/mL（正常低值）",
+      "vitamin_D": "22 ng/mL (↓)"
+    },
+    "imaging": "無",
+    "assessment": "重度憂鬱症（Major Depressive Disorder），中度嚴重度",
+    "plan": "Escitalopram 10mg QD（起始劑量，2週後評估加量至20mg）。Zolpidem 5mg QN（短期失眠）。每2週精神科回診。心理諮商轉介。Vitamin D補充。",
+    "outcome": "4週後情緒稍改善，睡眠品質提升。Escitalopram加量至20mg。持續追蹤中。",
+    "follow_up": "每月精神科追蹤，自殺風險定期評估。"
+  },
+  {
+    "record_id": "MR-2024-013",
+    "patient": {
+      "name": "林志明",
+      "id": "M345678902",
+      "dob": "1975-01-30",
+      "phone": "0922-567-890",
+      "address": "台中市大甲區中山路三段852號",
+      "emergency_contact": "林秀芳 (妻) 0944-555-666"
+    },
+    "visit_date": "2024-04-08",
+    "department": "心臟內科",
+    "chief_complaint": "心悸、胸悶、頭暈，反覆發作",
+    "hpi": "49歲男性，有高血壓病史。近3個月反覆心悸，有時伴隨胸悶及頭暈，每次持續數分鐘至數小時，昨日發作持續12小時至今。",
+    "pmh": ["高血壓"],
+    "medications": [
+      {"name": "Valsartan", "dose": "80mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "138/86 mmHg", "hr": "148 bpm（不規則）", "rr": "18/min", "temp": "36.7°C", "spo2": "96%"},
+    "labs": {
+      "troponin": "0.08 ng/mL（正常上限邊緣）",
+      "BNP": "185 pg/mL (↑)",
+      "TSH": "1.8 mIU/L（正常）",
+      "K": "4.1 mEq/L",
+      "Mg": "1.9 mg/dL"
+    },
+    "imaging": "心電圖：心房顫動（Atrial Fibrillation），心室率148次/分，無ST-T變化。心臟超音波：左心房擴大（4.8cm），EF 55%，無瓣膜異常。",
+    "assessment": "新發心房顫動（持續性），高血壓性心臟病",
+    "plan": "心室速率控制：Metoprolol 25mg BID。抗凝血治療：CHA2DS2-VASc score 2分，開始Rivaroxaban 20mg QD（飯後）。考慮電擊轉律或藥物轉律。TEE排除左心耳血栓。",
+    "outcome": "Metoprolol後心室率降至88次/分。TEE無血栓。電擊轉律成功轉回竇性節律。持續抗凝治療。",
+    "follow_up": "1個月後心臟科追蹤，評估長期心律控制策略（消融術）。"
+  },
+  {
+    "record_id": "MR-2024-014",
+    "patient": {
+      "name": "黃美華",
+      "id": "N456789013",
+      "dob": "1962-07-17",
+      "phone": "0966-678-901",
+      "address": "台中市太平區中山路一段963號",
+      "emergency_contact": "黃建國 (夫) 0911-777-888"
+    },
+    "visit_date": "2024-04-15",
+    "department": "肺癌治療中心",
+    "chief_complaint": "咳嗽帶血絲、體重減輕、右側胸痛3個月",
+    "hpi": "62歲女性，不吸菸。近3個月持續咳嗽，偶有血絲，右側胸部悶痛，體重下降約8kg，食慾差。",
+    "pmh": ["無"],
+    "medications": [],
+    "vitals": {"bp": "128/80 mmHg", "hr": "86 bpm", "rr": "18/min", "temp": "37.0°C", "spo2": "95%"},
+    "labs": {
+      "CEA": "45.2 ng/mL (↑)",
+      "CYFRA21-1": "8.6 ng/mL (↑)",
+      "albumin": "3.2 g/dL (↓)",
+      "LDH": "285 U/L (↑)"
+    },
+    "imaging": "胸部CT：右肺上葉4.5×3.8cm不規則腫塊，縱膈淋巴結腫大，右側肋膜積液。PET-CT：右肺原發病灶高代謝，縱膈及右鎖骨上淋巴結轉移（N3）。腦部MRI：無轉移。",
+    "assessment": "右肺腺癌，臨床分期IIIB（T2bN3M0），不可手術",
+    "plan": "基因檢測（EGFR、ALK、ROS1、PD-L1）。等待結果期間，多學科腫瘤討論。預計以同步放化療為主要治療（CCRT）。",
+    "outcome": "EGFR exon 21 L858R突變陽性，PD-L1 30%。改為Osimertinib 80mg QD靶向治療。治療3個月後腫瘤縮小約50%。",
+    "follow_up": "每2個月影像追蹤，定期腫瘤科門診。"
+  },
+  {
+    "record_id": "MR-2024-015",
+    "patient": {
+      "name": "王俊民",
+      "id": "O567890124",
+      "dob": "1986-12-03",
+      "phone": "0933-789-012",
+      "address": "台中市龍井區中山路二段174號",
+      "emergency_contact": "王美惠 (母) 0977-999-000"
+    },
+    "visit_date": "2024-04-22",
+    "department": "急診",
+    "chief_complaint": "交通事故後頭痛、噁心、短暫意識不清",
+    "hpi": "38歲男性，機車事故，戴安全帽，頭部撞擊路面。短暫意識不清（約30秒），清醒後持續頭痛、噁心嘔吐2次，無肢體無力。",
+    "pmh": ["無"],
+    "medications": [],
+    "vitals": {"bp": "135/88 mmHg", "hr": "92 bpm", "rr": "16/min", "temp": "36.8°C", "spo2": "99%"},
+    "labs": {
+      "CBC": "正常",
+      "blood_alcohol": "陰性",
+      "coagulation": "正常"
+    },
+    "imaging": "頭部CT：右側顳頂部硬腦膜外血腫（厚度8mm，中線偏移3mm），無腦挫傷。頸椎X光：無骨折脫位。",
+    "assessment": "急性硬腦膜外血腫（EDH），輕度顱腦損傷（GCS 14分）",
+    "plan": "神經外科急會診。密切神經學監測（每小時GCS評估）。頭部CT 4-6小時後複查。備手術（開顱引流）。禁食。",
+    "outcome": "觀察6小時後GCS 15分，複查CT血腫未擴大（8mm穩定），保守治療。住院觀察48小時後出院。",
+    "follow_up": "1週後神經外科門診複查CT，頭部外傷後症候群衛教。"
+  },
+  {
+    "record_id": "MR-2024-016",
+    "patient": {
+      "name": "蘇雅琪",
+      "id": "P678901235",
+      "dob": "1993-04-11",
+      "phone": "0944-890-123",
+      "address": "台中市神岡區中山路三段285號",
+      "emergency_contact": "蘇建忠 (父) 0922-111-222"
+    },
+    "visit_date": "2024-05-03",
+    "department": "免疫風濕科",
+    "chief_complaint": "臉部蝴蝶斑、關節痛、發燒、疲倦",
+    "hpi": "31歲女性，近4個月臉部出現蝴蝶形紅疹，對稱性多關節疼痛，反覆低燒，脫髮，口腔潰瘍，疲倦感明顯。",
+    "pmh": ["無"],
+    "medications": [],
+    "vitals": {"bp": "125/78 mmHg", "hr": "88 bpm", "rr": "16/min", "temp": "37.8°C", "spo2": "98%"},
+    "labs": {
+      "ANA": "1:640 homogeneous",
+      "anti_dsDNA": "456 IU/mL (↑)",
+      "anti_Sm": "陽性",
+      "complement_C3": "62 mg/dL (↓)",
+      "complement_C4": "8 mg/dL (↓)",
+      "CBC": "WBC 2800（白血球低下）, Hb 9.5（貧血）, PLT 98000（血小板低下）",
+      "urine_protein": "2+",
+      "24hr_urine_protein": "1.8g（↑）",
+      "creatinine": "1.3 mg/dL"
+    },
+    "imaging": "腎臟切片：狼瘡性腎炎第III型（局灶性增生型）。",
+    "assessment": "全身性紅斑性狼瘡（SLE），SLEDAI 18分（重度活性），合併狼瘡性腎炎",
+    "plan": "住院治療。高劑量Methylprednisolone 500mg IV pulse治療×3天。Hydroxychloroquine 200mg BID。Mycophenolate mofetil 1g BID（腎炎誘導治療）。Calcium及Vitamin D補充。防曬措施。",
+    "outcome": "Pulse治療後發燒改善，補體回升，蛋白尿逐漸減少。2個月後SLEDAI降至8分。",
+    "follow_up": "每月追蹤腎功能、補體、尿蛋白。"
+  },
+  {
+    "record_id": "MR-2024-017",
+    "patient": {
+      "name": "方建宏",
+      "id": "Q789012346",
+      "dob": "1967-09-25",
+      "phone": "0955-901-234",
+      "address": "台中市潭子區中山路一段396号",
+      "emergency_contact": "方秀英 (妻) 0933-333-444"
+    },
+    "visit_date": "2024-05-10",
+    "department": "神經外科",
+    "chief_complaint": "左側肢體無力、說話不清楚，突然發生",
+    "hpi": "57歲男性，有高血壓及糖尿病病史。今日上午突然發生右側臉部下垂、右側手腳無力（無法抬起）、語言不清（dysarthria），持續未改善，家屬送急診。",
+    "pmh": ["高血壓", "第二型糖尿病"],
+    "medications": [
+      {"name": "Amlodipine", "dose": "5mg", "frequency": "QD"},
+      {"name": "Glipizide", "dose": "5mg", "frequency": "BID"}
+    ],
+    "vitals": {"bp": "182/105 mmHg", "hr": "88 bpm", "rr": "18/min", "temp": "36.9°C", "spo2": "97%"},
+    "labs": {
+      "glucose": "245 mg/dL",
+      "HbA1c": "9.1%",
+      "INR": "1.0",
+      "platelet": "220,000/μL",
+      "troponin": "正常"
+    },
+    "imaging": "頭部CT（發病1小時）：無出血，左側大腦中動脈供血區早期缺血變化。頭部MRI DWI：左側基底核及內囊後肢急性梗塞。CTA：左側大腦中動脈M1段次全閉塞。",
+    "assessment": "急性缺血性腦中風（左側MCA territory），NIHSS 14分",
+    "plan": "發病4.5小時內，給予靜脈rtPA溶栓治療（0.9mg/kg, max 90mg）。神經介入科評估機械性血栓清除術（thrombectomy）。加護病房監測。抗血小板、血壓控制、血糖管理。",
+    "outcome": "rtPA後症狀部分改善（NIHSS降至8分）。血管攝影確認左側MCA再通。Thrombectomy成功（TICI 2b）。出院NIHSS 6分，右側肢體部分功能恢復。",
+    "follow_up": "出院後復健科積極復健，1個月後神經科追蹤。二級預防：Aspirin + Atorvastatin。"
+  },
+  {
+    "record_id": "MR-2024-018",
+    "patient": {
+      "name": "謝雅文",
+      "id": "R890123457",
+      "dob": "1976-06-20",
+      "phone": "0977-012-345",
+      "address": "台中市外埔區中山路二段507号",
+      "emergency_contact": "謝建平 (兄) 0911-555-666"
+    },
+    "visit_date": "2024-05-18",
+    "department": "肝膽腸胃科",
+    "chief_complaint": "全身皮膚及眼白黃染、深色尿液、右上腹悶痛",
+    "hpi": "48歲女性，近3週皮膚及鞏膜明顯黃染，尿液呈茶色，右上腹悶脹感，食慾差，輕微發燒。",
+    "pmh": ["膽結石（已知，未治療）"],
+    "medications": [],
+    "vitals": {"bp": "128/82 mmHg", "hr": "96 bpm", "rr": "17/min", "temp": "38.1°C", "spo2": "98%"},
+    "labs": {
+      "total_bilirubin": "12.8 mg/dL (↑)",
+      "direct_bilirubin": "10.2 mg/dL (↑)",
+      "ALT": "185 U/L (↑)",
+      "AST": "165 U/L (↑)",
+      "alkaline_phosphatase": "485 U/L (↑)",
+      "GGT": "380 U/L (↑)",
+      "CA19-9": "185 U/mL (↑)",
+      "CEA": "8.5 ng/mL (↑)"
+    },
+    "imaging": "腹部超音波：膽管擴張（總膽管1.5cm），肝內膽管擴張，膽囊水腫。ERCP：總膽管下端狹窄。胰頭部CT：胰頭3.2×2.8cm低密度腫塊，胰管擴張（雙管徵）。",
+    "assessment": "疑似胰頭癌合併膽道阻塞性黃疸",
+    "plan": "ERCP膽道引流及支架置入（解除黃疸）。胰十二指腸切除術（Whipple手術）評估。腫瘤切片病理確認。多學科腫瘤討論。",
+    "outcome": "病理：胰腺管腺癌。評估後屬可切除病灶（resectable）。Whipple手術成功。術後輔助化療（Gemcitabine + Capecitabine）。",
+    "follow_up": "每3個月影像追蹤，腫瘤科門診。"
+  },
+  {
+    "record_id": "MR-2024-019",
+    "patient": {
+      "name": "陳冠宇",
+      "id": "S901234568",
+      "dob": "1999-02-28",
+      "phone": "0922-123-456",
+      "address": "台中市和平區中正路一段618号",
+      "emergency_contact": "陳美珠 (母) 0988-777-888"
+    },
+    "visit_date": "2024-05-25",
+    "department": "急診",
+    "chief_complaint": "藥物過量（Acetaminophen），故意服用",
+    "hpi": "25歲男性，因感情問題情緒低落，今日一次服用Acetaminophen 8g（約16顆500mg）。服用後約2小時由家人發現就醫，否認合併其他藥物。",
+    "pmh": ["憂鬱症（治療中）"],
+    "medications": [
+      {"name": "Sertraline", "dose": "100mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "118/75 mmHg", "hr": "98 bpm", "rr": "16/min", "temp": "36.7°C", "spo2": "99%"},
+    "labs": {
+      "acetaminophen_level": "285 μg/mL（服用4hr後，Rumack-Matthew線以上）",
+      "AST": "45 U/L（初始正常）",
+      "ALT": "38 U/L（初始正常）",
+      "PT": "13.2 sec（正常）",
+      "creatinine": "0.9 mg/dL"
+    },
+    "imaging": "無",
+    "assessment": "Acetaminophen急性中毒（高危險性），蓄意自傷",
+    "plan": "N-Acetylcysteine（NAC）立即給予（150mg/kg IV over 60min，後持續輸注）。活性碳（服用<1小時考慮）。每6小時監測肝功能及凝血。精神科緊急會診。安全評估。",
+    "outcome": "NAC治療72小時，肝功能維持正常（AST peak 85 U/L，無肝衰竭）。精神科評估：中度自殺風險，轉精神科病房。",
+    "follow_up": "精神科住院治療，出院後定期追蹤。"
+  },
+  {
+    "record_id": "MR-2024-020",
+    "patient": {
+      "name": "林佩蓉",
+      "id": "T012345679",
+      "dob": "1984-08-14",
+      "phone": "0966-234-567",
+      "address": "台中市石岡區中山路三段729号",
+      "emergency_contact": "林建宏 (夫) 0944-999-000"
+    },
+    "visit_date": "2024-06-03",
+    "department": "新陳代謝科",
+    "chief_complaint": "甲狀腺腫大、心跳加速、手抖、體重減輕",
+    "hpi": "40歲女性，近4個月頸部腫大，心跳加速（靜息時仍明顯）、手部細微顫抖、體重減少6kg但食慾增加、容易緊張焦慮、眼球突出。",
+    "pmh": ["無"],
+    "medications": [],
+    "vitals": {"bp": "145/72 mmHg（脈壓差大）", "hr": "118 bpm", "rr": "18/min", "temp": "37.1°C", "spo2": "98%"},
+    "labs": {
+      "TSH": "<0.01 mIU/L (↓↓)",
+      "free_T4": "4.8 ng/dL (↑)",
+      "free_T3": "12.5 pg/mL (↑)",
+      "TSH_receptor_antibody": "18.5 IU/L (↑)",
+      "CBC": "正常"
+    },
+    "imaging": "甲狀腺超音波：瀰漫性甲狀腺腫大（體積65mL），血流豐富（thyroid inferno）。放射性碘攝取掃描：攝取率85%（明顯增高）。",
+    "assessment": "葛瑞夫茲氏病（Graves' Disease），甲狀腺機能亢進",
+    "plan": "Methimazole 30mg/天（分次服用）。Propranolol 20mg BID（心跳控制）。定期甲狀腺功能追蹤。眼科評估眼球突出。討論根治療法（放射性碘治療或手術）。",
+    "outcome": "6週後TSH 0.05 mIU/L，FT4降至2.1 ng/dL，心跳88次/分。症狀明顯改善。",
+    "follow_up": "每4-6週追蹤甲狀腺功能，半年後評估緩解可能性。"
+  },
+  {
+    "record_id": "MR-2024-021",
+    "patient": {
+      "name": "鄭文彬",
+      "id": "U123456781",
+      "dob": "1960-11-09",
+      "phone": "0933-345-678",
+      "address": "台中市大安區中山路一段840号",
+      "emergency_contact": "鄭秀珍 (妻) 0977-111-222"
+    },
+    "visit_date": "2024-06-10",
+    "department": "大腸直腸外科",
+    "chief_complaint": "排便習慣改變、血便、腹部隱痛3個月",
+    "hpi": "64歲男性，有大腸癌家族史（父親）。近3個月大便變細，間歇性便血（鮮紅色混於糞便中），左下腹隱隱作痛，體重下降5kg。",
+    "pmh": ["高血壓", "高血脂"],
+    "medications": [
+      {"name": "Amlodipine", "dose": "5mg", "frequency": "QD"},
+      {"name": "Simvastatin", "dose": "20mg", "frequency": "QN"}
+    ],
+    "vitals": {"bp": "148/92 mmHg", "hr": "80 bpm", "rr": "15/min", "temp": "36.8°C", "spo2": "98%"},
+    "labs": {
+      "CEA": "28.5 ng/mL (↑)",
+      "CA19-9": "45 U/mL (↑略高)",
+      "Hb": "10.2 g/dL (↓)",
+      "MCV": "75 fL（缺鐵性貧血型態）",
+      "fecal_occult_blood": "陽性"
+    },
+    "imaging": "大腸鏡：乙狀結腸15cm處環形腫瘤，幾乎阻塞腸腔，切片病理：管狀腺癌，分化中等。腹部CT：腫瘤局限於腸壁，無明顯遠端轉移，局部淋巴結腫大。",
+    "assessment": "乙狀結腸癌，臨床分期II-III期（T3N1M0）",
+    "plan": "多學科腫瘤討論。術前評估（心肺功能）。腹腔鏡輔助乙狀結腸切除術（sigmoid colectomy）。術後視病理分期決定是否追加輔助化療（FOLFOX）。",
+    "outcome": "手術成功，切除腫瘤及區域淋巴結。病理：T3N1（3/18淋巴結陽性），切緣陰性，MSI-stable。建議術後FOLFOX輔助化療6個月。",
+    "follow_up": "化療期間每2週門診，術後每6個月影像及CEA追蹤。"
+  },
+  {
+    "record_id": "MR-2024-022",
+    "patient": {
+      "name": "吳淑美",
+      "id": "V234567812",
+      "dob": "1971-03-16",
+      "phone": "0988-456-789",
+      "address": "台中市海線沙鹿區中山路二段951号",
+      "emergency_contact": "吳建民 (夫) 0911-333-444"
+    },
+    "visit_date": "2024-06-18",
+    "department": "乳房外科",
+    "chief_complaint": "右乳腫塊，無痛，自行發現1個月",
+    "hpi": "53歲女性，停經2年，有乳癌家族史（姊姊）。自行觸摸發現右側乳房外上象限硬塊，不痛，皮膚無凹陷，腋下無明顯腫塊。",
+    "pmh": ["無"],
+    "medications": [],
+    "vitals": {"bp": "125/80 mmHg", "hr": "74 bpm", "rr": "15/min", "temp": "36.6°C", "spo2": "99%"},
+    "labs": {
+      "CA15-3": "38 U/mL (↑略高)",
+      "CEA": "4.8 ng/mL（正常上限）"
+    },
+    "imaging": "乳房超音波：右乳外上象限1.8×1.5cm低回音不規則腫塊，邊緣不平整，後方音影（BIRADS 5）。乳房攝影：右乳外上象限腫塊合併微鈣化（BI-RADS 5）。MRI：腫塊強化特徵符合惡性，無多發病灶，腋下淋巴結輕度腫大。",
+    "assessment": "右乳腫塊，高度懷疑惡性（BI-RADS 5）",
+    "plan": "超音波導引切片（Core needle biopsy）。腋下前哨淋巴結切片評估。多學科腫瘤討論。",
+    "outcome": "病理：浸潤性乳管癌，Grade 2，ER+（90%）、PR+（70%）、HER2陰性（Luminal A型）。分期：T1cN0M0（Stage I）。手術：乳房保留手術（lumpectomy）+ 前哨淋巴結切片（陰性）。術後放療 + 荷爾蒙治療（Tamoxifen 5年）。",
+    "follow_up": "每6個月乳房影像追蹤，Tamoxifen追蹤子宮內膜。"
+  },
+  {
+    "record_id": "MR-2024-023",
+    "patient": {
+      "name": "許志偉",
+      "id": "W345678923",
+      "dob": "1979-07-04",
+      "phone": "0911-567-890",
+      "address": "台中市大肚區中山路三段162号",
+      "emergency_contact": "許秀鳳 (妻) 0955-555-666"
+    },
+    "visit_date": "2024-07-02",
+    "department": "感染科",
+    "chief_complaint": "持續高燒、全身肌肉酸痛、頭痛，5天",
+    "hpi": "45歲男性，從東南亞出差返台1週。5天前開始間歇性高燒（最高39.8°C），伴隨嚴重全身肌肉酸痛、頭痛、輕微腹瀉，無咳嗽。",
+    "pmh": ["無"],
+    "medications": [],
+    "vitals": {"bp": "118/72 mmHg", "hr": "105 bpm", "rr": "20/min", "temp": "39.5°C", "spo2": "97%"},
+    "labs": {
+      "CBC": "WBC 3200 (↓), Hb 11.8 g/dL, PLT 68,000 (↓)",
+      "CRP": "95 mg/L (↑)",
+      "LDH": "385 U/L (↑)",
+      "malaria_smear": "P. vivax trophozoites, parasitemia 1.2%",
+      "dengue_NS1": "陰性",
+      "liver_function": "ALT 85 U/L (↑輕度)"
+    },
+    "imaging": "腹部超音波：輕度脾臟腫大。",
+    "assessment": "間日瘧（Plasmodium vivax malaria）",
+    "plan": "隔離（防蚊措施）。Chloroquine 600mg loading，後250mg Q6H（共1.5g）。Primaquine 15mg QD × 14天（根除肝臟潛伏型，先確認G6PD正常）。",
+    "outcome": "G6PD正常。Chloroquine治療後48小時退燒。Primaquine完成14天療程。追蹤血片瘧原蟲陰性。",
+    "follow_up": "1週及1個月後血片追蹤，旅遊醫學衛教（預防性藥物）。"
+  },
+  {
+    "record_id": "MR-2024-024",
+    "patient": {
+      "name": "陳怡君",
+      "id": "X456789034",
+      "dob": "1991-01-19",
+      "phone": "0944-678-901",
+      "address": "台中市大雅區中山路一段273号",
+      "emergency_contact": "陳建明 (夫) 0933-777-888"
+    },
+    "visit_date": "2024-07-10",
+    "department": "婦產科",
+    "chief_complaint": "孕32週，血壓升高、頭痛、右上腹痛、視力模糊",
+    "hpi": "33歲女性，G2P1，懷孕32週。昨日開始血壓升高（最高155/100 mmHg），今日出現頭痛、右上腹疼痛、視力模糊，無陰道出血，胎動尚可。",
+    "pmh": ["前一胎輕度妊娠高血壓"],
+    "medications": [
+      {"name": "葉酸", "dose": "1mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "162/108 mmHg", "hr": "95 bpm", "rr": "18/min", "temp": "36.9°C", "spo2": "98%"},
+    "labs": {
+      "urine_protein": "3+",
+      "24hr_urine_protein": "3.8g (↑)",
+      "platelet": "88,000/μL (↓)",
+      "AST": "125 U/L (↑)",
+      "ALT": "98 U/L (↑)",
+      "LDH": "485 U/L (↑)",
+      "creatinine": "1.4 mg/dL (↑)",
+      "Hb": "10.5 g/dL（溶血跡象）"
+    },
+    "imaging": "胎兒超音波：胎兒體重估計1,620g（第10百分位），羊水正常，胎盤功能評估：RI升高。",
+    "assessment": "重度子癲前症（Severe Preeclampsia）合併HELLP症候群（部分型）",
+    "plan": "住院，產科加護病房。血壓控制：Labetalol IV。硫酸鎂預防癲癇（4g loading後2g/hr維持）。肺部成熟：類固醇（Betamethasone）促胎肺成熟×2劑。密切監測母胎狀況，評估終止妊娠時機（34週目標）。",
+    "outcome": "血壓在藥物治療下控制至145/92 mmHg。血小板持續下降至72,000。孕33+2週緊急剖腹產，新生兒1680g，轉新生兒加護病房。產後血壓逐漸改善，HELLP緩解。",
+    "follow_up": "產後6週追蹤血壓，下次懷孕前心腎評估，低劑量Aspirin預防。"
+  },
+  {
+    "record_id": "MR-2024-025",
+    "patient": {
+      "name": "梁志強",
+      "id": "Y567890145",
+      "dob": "1956-05-27",
+      "phone": "0977-789-012",
+      "address": "台中市北屯區文心路四段384号",
+      "emergency_contact": "梁秀珠 (妻) 0966-999-000"
+    },
+    "visit_date": "2024-07-18",
+    "department": "胸腔外科",
+    "chief_complaint": "咳血、右側胸悶、體重下降",
+    "hpi": "68歲男性，重度吸菸（2包/天×40年）。近4個月反覆咳血（每次約10-20mL），右側胸悶，體重下降10kg。",
+    "pmh": ["COPD", "高血壓"],
+    "medications": [
+      {"name": "Tiotropium（吸入）", "dose": "18mcg", "frequency": "QD"},
+      {"name": "Amlodipine", "dose": "10mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "152/95 mmHg", "hr": "88 bpm", "rr": "22/min", "temp": "36.8°C", "spo2": "91%（room air）"},
+    "labs": {
+      "CEA": "125 ng/mL (↑↑)",
+      "CYFRA21-1": "22.5 ng/mL (↑)",
+      "albumin": "2.9 g/dL (↓)",
+      "PFT": "FEV1 1.2L（52% predicted）"
+    },
+    "imaging": "胸部CT：右肺上葉中央型腫瘤（7.5×6.2cm），阻塞右肺上葉支氣管，縱膈淋巴結廣泛腫大，右側肋膜積液（大量）。PET-CT：廣泛轉移（骨骼、肝臟、對側肺）。",
+    "assessment": "右肺鱗狀細胞癌，第四期（T4N3M1c），不可切除",
+    "plan": "姑息性治療。基因檢測（PDL1表現）。胸腔積液引流（緩解症狀）。腫瘤科討論：化療（Carboplatin + Paclitaxel）或免疫治療（Pembrolizumab，依PDL1結果）。安寧療護諮詢。",
+    "outcome": "PDL1 TPS 65%。給予Pembrolizumab單藥治療。3個月後PR（部分緩解），症狀改善。",
+    "follow_up": "每3週免疫治療，每6週影像評估。"
+  },
+  {
+    "record_id": "MR-2024-026",
+    "patient": {
+      "name": "蔡明珠",
+      "id": "Z678901256",
+      "dob": "1969-10-08",
+      "phone": "0955-890-123",
+      "address": "台中市南屯區公益路二段495号",
+      "emergency_contact": "蔡建宏 (子) 0922-111-222"
+    },
+    "visit_date": "2024-07-25",
+    "department": "腸胃科",
+    "chief_complaint": "反覆上腹痛、進食後加劇、噁心嘔吐",
+    "hpi": "55歲女性，有膽結石病史5年（未手術）。近2個月上腹痛反覆發作，常在油膩飲食後加劇，伴隨噁心嘔吐，3天前發作明顯加重，發燒38.2°C。",
+    "pmh": ["膽結石", "高血脂"],
+    "medications": [
+      {"name": "Rosuvastatin", "dose": "10mg", "frequency": "QN"}
+    ],
+    "vitals": {"bp": "135/85 mmHg", "hr": "102 bpm", "rr": "19/min", "temp": "38.4°C", "spo2": "97%"},
+    "labs": {
+      "WBC": "16,800/μL (↑)",
+      "CRP": "145 mg/L (↑)",
+      "amylase": "385 U/L (↑)",
+      "lipase": "625 U/L (↑)",
+      "total_bilirubin": "3.2 mg/dL (↑略)",
+      "ALT": "125 U/L (↑)",
+      "alkaline_phosphatase": "285 U/L (↑)"
+    },
+    "imaging": "腹部超音波：膽囊多發結石，膽囊壁增厚（5mm），膽囊周圍積液，膽管輕度擴張。CT腹部：急性膽囊炎合併膽源性胰臟炎（Balthazar C級）。",
+    "assessment": "急性膽囊炎合併膽源性急性胰臟炎（中度）",
+    "plan": "禁食。IV fluid補充。Piperacillin-tazobactam抗生素治療。疼痛控制（Tramadol）。待急性期緩解後安排腹腔鏡膽囊切除術。",
+    "outcome": "治療4天後症狀改善，amylase降至正常。急性期後第7天行腹腔鏡膽囊切除術，順利完成，無併發症。",
+    "follow_up": "術後1週門診，低脂飲食建議。"
+  },
+  {
+    "record_id": "MR-2024-027",
+    "patient": {
+      "name": "李俊賢",
+      "id": "AA789012367",
+      "dob": "1983-04-22",
+      "phone": "0944-901-234",
+      "address": "台中市烏日區光明路一段606号",
+      "emergency_contact": "李秀芳 (妻) 0988-333-444"
+    },
+    "visit_date": "2024-08-05",
+    "department": "過敏免疫科",
+    "chief_complaint": "反覆氣喘發作、夜間喘鳴、運動後呼吸困難",
+    "hpi": "41歲男性，有過敏體質（鼻炎、濕疹）。近1年氣喘症狀頻繁，每週發作超過2次，夜間喘鳴影響睡眠，使用速效支氣管擴張劑每週超過5次，最近一次急診2個月前。",
+    "pmh": ["過敏性鼻炎", "異位性皮膚炎"],
+    "medications": [
+      {"name": "Salbutamol（吸入）", "dose": "100mcg", "frequency": "PRN（過度使用）"}
+    ],
+    "vitals": {"bp": "125/78 mmHg", "hr": "88 bpm", "rr": "20/min", "temp": "36.6°C", "spo2": "95%"},
+    "labs": {
+      "IgE": "485 IU/mL (↑)",
+      "eosinophil": "9% (↑)",
+      "allergen_test": "塵蟎（4+）、蟑螂（3+）、貓皮屑（2+）",
+      "FeNO": "55 ppb (↑，嗜酸性發炎)"
+    },
+    "imaging": "肺功能：FEV1/FVC 68%（阻塞性型態），支氣管擴張試驗陽性（FEV1增加15%）。胸部X光：輕度過度充氣。",
+    "assessment": "重度持續性過敏性氣喘（Step 4），控制不良",
+    "plan": "升階治療：高劑量ICS/LABA（Fluticasone/Salmeterol 500/50mcg BID）。加入Montelukast 10mg QD。過敏原迴避衛教（防塵蟎寢具）。考慮生物製劑（Dupilumab或Omalizumab）。氣喘行動計畫制定。",
+    "outcome": "2個月後ACQ評分從4.8降至2.1，急性發作次數明顯減少。速效支氣管擴張劑使用頻率降至每週1次以下。",
+    "follow_up": "每3個月肺功能及FeNO追蹤，評估生物製劑適應症。"
+  },
+  {
+    "record_id": "MR-2024-028",
+    "patient": {
+      "name": "王雅蘭",
+      "id": "BB890123478",
+      "dob": "1974-09-13",
+      "phone": "0933-012-345",
+      "address": "台中市東勢區中山路二段717号",
+      "emergency_contact": "王建志 (夫) 0977-555-666"
+    },
+    "visit_date": "2024-08-12",
+    "department": "血液腫瘤科",
+    "chief_complaint": "疲倦、臉色蒼白、頸部淋巴結腫大，6週",
+    "hpi": "50歲女性，近6週極度疲倦、臉色蒼白、頸部雙側無痛性淋巴結腫大，伴隨夜間盜汗、體重下降約4kg、偶有低燒。",
+    "pmh": ["無"],
+    "medications": [],
+    "vitals": {"bp": "115/72 mmHg", "hr": "98 bpm", "rr": "16/min", "temp": "37.4°C", "spo2": "98%"},
+    "labs": {
+      "CBC": "WBC 42,000/μL (↑), 淋巴球85%, Hb 8.2 g/dL (↓), PLT 95,000/μL (↓)",
+      "LDH": "856 U/L (↑↑)",
+      "uric_acid": "8.5 mg/dL (↑)",
+      "beta2_microglobulin": "6.8 mg/L (↑)",
+      "flow_cytometry": "CD19+CD5+CD23+，κ輕鏈限制性"
+    },
+    "imaging": "CT全身：頸部、腋下、腹股溝多組淋巴結腫大，脾臟腫大（18cm）。骨髓切片：淋巴球浸潤80%。",
+    "assessment": "慢性淋巴球性白血病（CLL），Rai Stage III，Binet Stage C",
+    "plan": "FISH及基因突變分析（IGHV、TP53、del(17p)）。治療適應症評估。FCR方案（Fludarabine + Cyclophosphamide + Rituximab）或新型標靶治療（Ibrutinib/Venetoclax）。",
+    "outcome": "TP53突變陽性，del(17p)。FCR療效差，選擇Venetoclax + Obinutuzumab。3個月後血球恢復，淋巴結明顯縮小，達完全緩解。",
+    "follow_up": "每月血液科追蹤，最短治療療程12個月後評估MRD。"
+  },
+  {
+    "record_id": "MR-2024-029",
+    "patient": {
+      "name": "黃建文",
+      "id": "CC901234589",
+      "dob": "1968-12-30",
+      "phone": "0966-123-456",
+      "address": "台中市新社區中山路三段828号",
+      "emergency_contact": "黃秀鳳 (妻) 0911-777-888"
+    },
+    "visit_date": "2024-08-20",
+    "department": "骨科",
+    "chief_complaint": "腰部劇烈疼痛，無法行走，放射至雙腳",
+    "hpi": "56歲男性，長期腰痛病史。昨日搬重物後突然腰部劇烈疼痛，向左腿放射，左腿麻木無力，大小便正常。",
+    "pmh": ["腰椎退化", "高血壓"],
+    "medications": [
+      {"name": "Celecoxib", "dose": "200mg", "frequency": "QD"},
+      {"name": "Olmesartan", "dose": "20mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "145/90 mmHg", "hr": "82 bpm", "rr": "15/min", "temp": "36.7°C", "spo2": "98%"},
+    "labs": {
+      "CBC": "正常",
+      "CRP": "12 mg/L（輕度升高）"
+    },
+    "imaging": "腰椎MRI：L4-L5椎間盤突出（巨大型），嚴重壓迫左側L4神經根，合併L4-L5椎管狹窄。L5-S1輕度椎間盤退化。",
+    "assessment": "L4-L5椎間盤突出，急性左側L4神經根壓迫症",
+    "plan": "絕對臥床休息。Celecoxib繼續使用。Gabapentin 300mg TID（神經痛）。Muscle relaxant（Methocarbamol）。若2-4週保守治療無效且神經症狀惡化，評估微創椎間盤切除術（Microdiscectomy）。",
+    "outcome": "2週後疼痛改善約50%，但仍有左腳輕度無力（肌力4/5）。討論後決定手術：微創L4-L5椎間盤切除術。術後1週疼痛明顯緩解，肌力恢復至5/5。",
+    "follow_up": "術後6週復健，1年內避免重物，定期骨科追蹤。"
+  },
+  {
+    "record_id": "MR-2024-030",
+    "patient": {
+      "name": "周淑芬",
+      "id": "DD012345690",
+      "dob": "1985-02-07",
+      "phone": "0977-234-567",
+      "address": "台中市豐原區富春街一段939号",
+      "emergency_contact": "周建平 (夫) 0944-999-000"
+    },
+    "visit_date": "2024-08-28",
+    "department": "眼科",
+    "chief_complaint": "右眼突然視力模糊、看東西有黑影飄動",
+    "hpi": "39歲女性，高度近視（-10D雙眼）。今日早上起床後發現右眼視野有黑影（像飛蚊）飄動，右眼視力突然模糊，有閃光感。",
+    "pmh": ["高度近視"],
+    "medications": [],
+    "vitals": {"bp": "118/75 mmHg", "hr": "72 bpm", "rr": "14/min", "temp": "36.5°C", "spo2": "99%"},
+    "labs": {
+      "無": "常規檢查正常"
+    },
+    "imaging": "眼底檢查：右眼視網膜裂孔（2處），伴隨玻璃體積血及局部視網膜剝離（範圍2個象限）。左眼視網膜格子狀退化（Lattice degeneration）。",
+    "assessment": "右眼視網膜剝離（裂孔性），左眼格子狀視網膜退化",
+    "plan": "緊急手術：右眼玻璃體切除術（Vitrectomy）+ 氣體填充 + 雷射光凝固術。術後頭部姿勢限制（保持特定方向）。左眼預防性雷射光凝固術。",
+    "outcome": "手術成功，視網膜完全復位。術後3個月最佳矯正視力0.5（術前0.1）。氣泡完全吸收。",
+    "follow_up": "術後每1個月眼科追蹤×6個月，長期高近視視網膜監測。"
+  },
+  {
+    "record_id": "MR-2024-031",
+    "patient": {
+      "name": "張偉傑",
+      "id": "EE123456791",
+      "dob": "1977-06-18",
+      "phone": "0955-345-678",
+      "address": "台中市南屯區五權西路二段150号",
+      "emergency_contact": "張秀惠 (妻) 0922-111-222"
+    },
+    "visit_date": "2024-09-05",
+    "department": "代謝外科",
+    "chief_complaint": "病態性肥胖，多種共病，要求手術評估",
+    "hpi": "47歲男性，身高172cm，體重135kg（BMI 45.6）。有第二型糖尿病、高血壓、睡眠呼吸中止症、高血脂。多次嘗試節食及運動均失敗，要求考慮減重手術。",
+    "pmh": ["第二型糖尿病", "高血壓", "睡眠呼吸中止症", "高血脂"],
+    "medications": [
+      {"name": "Insulin Glargine", "dose": "30 units", "frequency": "QN"},
+      {"name": "Metformin", "dose": "1000mg", "frequency": "BID"},
+      {"name": "Amlodipine", "dose": "10mg", "frequency": "QD"},
+      {"name": "Atorvastatin", "dose": "40mg", "frequency": "QN"}
+    ],
+    "vitals": {"bp": "155/98 mmHg", "hr": "88 bpm", "rr": "18/min", "temp": "36.9°C", "spo2": "94%（room air）"},
+    "labs": {
+      "HbA1c": "9.8% (↑)",
+      "fasting_glucose": "245 mg/dL (↑)",
+      "triglyceride": "385 mg/dL (↑)",
+      "HDL": "32 mg/dL (↓)",
+      "LDL": "145 mg/dL (↑)"
+    },
+    "imaging": "睡眠多項生理檢查（PSG）：重度睡眠呼吸中止（AHI 52次/小時）。上消化道攝影：無特殊禁忌。",
+    "assessment": "病態性肥胖（BMI 45.6），合併多種代謝共病，手術適應症",
+    "plan": "腹腔鏡袖狀胃切除術（Sleeve Gastrectomy）。術前多學科評估（心臟科、麻醉科、精神科）。術前CPAP治療。術後長期營養追蹤。",
+    "outcome": "手術成功。術後6個月體重降至95kg（-40kg），HbA1c 6.8%，血壓正常，停用Insulin。",
+    "follow_up": "每3個月追蹤代謝指標，終身營養補充（B12、鐵、鈣）。"
+  },
+  {
+    "record_id": "MR-2024-032",
+    "patient": {
+      "name": "吳雅如",
+      "id": "FF234567812",
+      "dob": "1989-11-25",
+      "phone": "0944-456-789",
+      "address": "台中市西屯區漢翔路一段261号",
+      "emergency_contact": "吳建忠 (父) 0933-333-444"
+    },
+    "visit_date": "2024-09-12",
+    "department": "神經內科",
+    "chief_complaint": "視力模糊（右眼）、下肢無力、疲倦，多次發作",
+    "hpi": "35歲女性，過去1年反覆出現視力問題（曾有球後視神經炎）、右下肢無力麻木，每次持續數週後部分緩解，有明顯疲倦感。熱天症狀加重（Uhthoff現象）。",
+    "pmh": ["球後視神經炎（1年前，已緩解）"],
+    "medications": [],
+    "vitals": {"bp": "118/76 mmHg", "hr": "75 bpm", "rr": "15/min", "temp": "36.7°C", "spo2": "99%"},
+    "labs": {
+      "oligoclonal_bands": "陽性（CSF中4條，血清中無）",
+      "IgG_index": "0.72 (↑)",
+      "VEP": "右側潛伏期延長（P100 = 122ms）",
+      "AQP4_antibody": "陰性",
+      "MOG_antibody": "陰性"
+    },
+    "imaging": "腦部MRI：多處白質病變（T2/FLAIR高訊號），periventricular及juxtacortical分佈，部分Dawson finger型態。脊髓MRI：C4-C5節段橫向小病變。",
+    "assessment": "多發性硬化症（MS），復發緩解型（RRMS），McDonald criteria符合",
+    "plan": "急性發作：Methylprednisolone 1g IV QD × 5天。長期疾病修飾治療（DMT）：Interferon beta-1a或Natalizumab（評估JCV抗體）。症狀治療：疲倦（Amantadine）。復健評估。",
+    "outcome": "Pulse治療後右下肢肌力改善（4→5）。開始Natalizumab（JCV陰性）治療。1年後無新病灶，無復發。",
+    "follow_up": "每6個月MRI追蹤，每3個月神經科門診，定期JCV監測。"
+  },
+  {
+    "record_id": "MR-2024-033",
+    "patient": {
+      "name": "陳銘宏",
+      "id": "GG345678923",
+      "dob": "1965-03-08",
+      "phone": "0922-567-890",
+      "address": "台中市北屯區崇德路一段372号",
+      "emergency_contact": "陳秀美 (妻) 0955-555-666"
+    },
+    "visit_date": "2024-09-20",
+    "department": "肝臟科",
+    "chief_complaint": "腹部脹大、雙腳水腫、食慾不振",
+    "hpi": "59歲男性，B型肝炎帶原者（已知），有長期飲酒習慣（每日啤酒6-8罐×20年）。近3個月腹部明顯脹大，雙腳踝水腫，食慾極差，偶有意識混亂。",
+    "pmh": ["B型肝炎帶原", "長期酒精使用"],
+    "medications": [],
+    "vitals": {"bp": "105/65 mmHg", "hr": "98 bpm", "rr": "18/min", "temp": "37.0°C", "spo2": "97%"},
+    "labs": {
+      "albumin": "2.1 g/dL (↓↓)",
+      "total_bilirubin": "8.5 mg/dL (↑)",
+      "PT": "22 sec, INR 2.1 (↑)",
+      "AST": "85 U/L (↑)",
+      "ALT": "42 U/L（AST/ALT>2，酒精性肝病型態）",
+      "AFP": "125 ng/mL (↑)",
+      "creatinine": "1.8 mg/dL (↑)",
+      "Na": "128 mEq/L (↓)",
+      "HBV_DNA": "25,000 IU/mL (↑)"
+    },
+    "imaging": "腹部超音波及CT：肝臟縮小，結節狀表面（肝硬化），大量腹水，脾臟腫大，食道靜脈曲張（胃鏡確認：Grade 2）。右肝葉3.2cm低密度結節（懷疑肝細胞癌）。",
+    "assessment": "酒精性肝硬化合併B型肝炎，Child-Pugh C（11分），MELD 24，肝腹水，疑似肝細胞癌",
+    "plan": "腹水：Spironolactone + Furosemide利尿劑，腹腔穿刺引流。B型肝炎治療：Tenofovir。戒酒。肝癌評估：動態CT確認，考慮TACE或肝臟移植評估。靜脈曲張：Propranolol預防出血。",
+    "outcome": "動態CT確診肝細胞癌（BCLC B期）。接受TACE治療。HBV DNA下降至<10 IU/mL。肝移植等待名單評估中。",
+    "follow_up": "每3個月AFP及影像追蹤，每6個月胃鏡。"
+  },
+  {
+    "record_id": "MR-2024-034",
+    "patient": {
+      "name": "楊淑惠",
+      "id": "HH456789034",
+      "dob": "1992-07-14",
+      "phone": "0966-678-901",
+      "address": "台中市霧峰區民生路二段483号",
+      "emergency_contact": "楊建民 (夫) 0911-777-888"
+    },
+    "visit_date": "2024-09-28",
+    "department": "婦產科",
+    "chief_complaint": "經血量極多、月經週期不規則、貧血",
+    "hpi": "32歲女性，近1年月經週期縮短（3週一次），經血量多（衛生棉每日8-10片），月經期延長至10天，頭暈、疲倦感明顯，體檢發現子宮明顯腫大。",
+    "pmh": ["無"],
+    "medications": [],
+    "vitals": {"bp": "108/68 mmHg", "hr": "102 bpm", "rr": "16/min", "temp": "36.6°C", "spo2": "99%"},
+    "labs": {
+      "Hb": "7.8 g/dL (↓↓)",
+      "MCV": "68 fL（小球性貧血，缺鐵）",
+      "ferritin": "8 ng/mL (↓↓)",
+      "TSH": "2.2 mIU/L（正常）",
+      "hCG": "陰性"
+    },
+    "imaging": "骨盆腔超音波：子宮多發性肌瘤（最大8.5×7.2cm位於後壁，次者3.5cm前壁），子宮整體體積360mL（正常<200mL），無附件異常。",
+    "assessment": "子宮多發性肌瘤，合併嚴重月經過多及缺鐵性貧血",
+    "plan": "貧血治療：靜脈鐵劑（Ferric carboxymaltose）。Ulipristal acetate 5mg QD（月經前控制）。腹腔鏡輔助肌瘤切除術（考量保留生育功能）。術前GnRH agonist萎縮肌瘤。",
+    "outcome": "術前Lupron Depot注射2劑後，最大肌瘤縮小至6.2cm，Hb回升至10.5 g/dL。腹腔鏡肌瘤切除術成功，切除7顆肌瘤。術後月經量恢復正常。",
+    "follow_up": "每年超音波監測復發，鐵劑補充追蹤。"
+  },
+  {
+    "record_id": "MR-2024-035",
+    "patient": {
+      "name": "劉志成",
+      "id": "II567890145",
+      "dob": "1973-01-11",
+      "phone": "0933-789-012",
+      "address": "台中市大里區東榮路三段594号",
+      "emergency_contact": "劉美珍 (妻) 0977-999-000"
+    },
+    "visit_date": "2024-10-05",
+    "department": "心臟外科",
+    "chief_complaint": "活動後喘氣、心臟雜音，漸進性加重2年",
+    "hpi": "51歲男性，幼時曾有風濕熱病史。近2年爬樓梯或快走即感喘氣，最近連平地走路也氣喘，夜間端坐呼吸，腳踝水腫。",
+    "pmh": ["幼年風濕熱（40年前）"],
+    "medications": [],
+    "vitals": {"bp": "115/85 mmHg（脈壓差窄）", "hr": "88 bpm（不規則）", "rr": "22/min", "temp": "36.7°C", "spo2": "93%（room air）"},
+    "labs": {
+      "BNP": "885 pg/mL (↑↑)",
+      "troponin": "0.12 ng/mL (↑)",
+      "creatinine": "1.5 mg/dL（輕度↑）",
+      "INR": "1.2"
+    },
+    "imaging": "心臟超音波：嚴重二尖瓣狹窄（MVA 0.8 cm²，嚴重），合併中度二尖瓣逆流，左心房巨大（6.5cm），EF 40%（降低），PHT 260ms，估計肺動脈壓62 mmHg（重度肺高壓）。心電圖：心房顫動。",
+    "assessment": "嚴重風濕性二尖瓣狹窄，合併心房顫動、肺高壓、心衰竭（NYHA IV）",
+    "plan": "多學科心臟團隊討論。抗凝血：Warfarin（目標INR 2-3）。利尿劑（Furosemide + Spironolactone）。手術評估：二尖瓣置換術（MVR，機械瓣）。術前完整評估（心導管、肺功能）。",
+    "outcome": "成功接受二尖瓣機械瓣置換術。術後肺壓改善（35 mmHg），EF回升至52%，症狀NYHA II。長期Warfarin（目標INR 2.5-3.5）。",
+    "follow_up": "每3個月INR監測，每年心臟超音波。"
+  },
+  {
+    "record_id": "MR-2024-036",
+    "patient": {
+      "name": "陳雅雯",
+      "id": "JJ678901256",
+      "dob": "1996-09-03",
+      "phone": "0988-890-123",
+      "address": "台中市南區忠明南路一段705号",
+      "emergency_contact": "陳建宏 (父) 0922-111-222"
+    },
+    "visit_date": "2024-10-12",
+    "department": "皮膚科",
+    "chief_complaint": "全身廣泛性紅疹、脫屑，伴隨關節疼痛",
+    "hpi": "28歲女性，3年前開始出現頭皮及肘膝部位銀白色鱗屑紅疹，逐漸擴展至全身約60%體表面積，伴隨雙手指關節及腕關節疼痛腫脹。",
+    "pmh": ["無"],
+    "medications": [
+      {"name": "外用類固醇（自行使用）", "dose": "不定", "frequency": "不規則"}
+    ],
+    "vitals": {"bp": "120/78 mmHg", "hr": "80 bpm", "rr": "16/min", "temp": "36.8°C", "spo2": "99%"},
+    "labs": {
+      "ESR": "55 mm/hr (↑)",
+      "CRP": "25 mg/L (↑)",
+      "RF": "陰性",
+      "HLA_B27": "陰性",
+      "uric_acid": "6.8 mg/dL（正常上限）",
+      "CBC": "正常"
+    },
+    "imaging": "手部X光：指間關節少量侵蝕，無嚴重破壞。關節超音波：末端指間關節滑膜炎及肌腱附著點炎。",
+    "assessment": "斑塊型乾癬（中重度，PASI 24），合併乾癬性關節炎（附著點炎型）",
+    "plan": "系統性治療：Methotrexate 15mg QW + Folic acid。外用：強效類固醇+維他命D類似物組合。評估生物製劑（IL-17A抑制劑：Secukinumab，對乾癬關節炎特別有效）。",
+    "outcome": "Methotrexate 3個月後PASI降至12（改善50%），關節疼痛部分緩解。加入Secukinumab後6個月PASI 2，關節症狀幾乎完全緩解。",
+    "follow_up": "每3個月皮膚科及風濕科共同追蹤。"
+  },
+  {
+    "record_id": "MR-2024-037",
+    "patient": {
+      "name": "蔡建明",
+      "id": "KK789012367",
+      "dob": "1961-04-29",
+      "phone": "0911-901-234",
+      "address": "台中市西屯區中清路二段816号",
+      "emergency_contact": "蔡秀珍 (妻) 0955-333-444"
+    },
+    "visit_date": "2024-10-20",
+    "department": "神經外科",
+    "chief_complaint": "頭痛、記憶力下降、行走不穩，漸進性",
+    "hpi": "63歲男性，3個月前跌倒頭部撞擊後，漸進性出現頭痛、近事記憶減退、說話遲緩、左側輕度無力、走路不穩。",
+    "pmh": ["高血壓", "服用Aspirin"],
+    "medications": [
+      {"name": "Aspirin", "dose": "100mg", "frequency": "QD"},
+      {"name": "Amlodipine", "dose": "5mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "152/92 mmHg", "hr": "78 bpm", "rr": "15/min", "temp": "36.8°C", "spo2": "98%"},
+    "labs": {
+      "PT": "12.8 sec",
+      "platelet": "188,000/μL",
+      "CBC": "正常"
+    },
+    "imaging": "頭部CT：右側慢性硬腦膜下血腫（厚度22mm），中線偏移8mm（向左）。",
+    "assessment": "右側慢性硬腦膜下血腫，中線偏移",
+    "plan": "停用Aspirin。緊急神經外科手術：顱骨鑽孔引流術（Burr hole drainage）×2孔。術後CT追蹤。",
+    "outcome": "手術順利，血腫清除，中線偏移消失。術後3天症狀明顯改善，頭痛消失，步態恢復正常。術後CT確認血腫消除。",
+    "follow_up": "1個月後CT追蹤，評估重新使用抗血小板藥物時機。"
+  },
+  {
+    "record_id": "MR-2024-038",
+    "patient": {
+      "name": "林美霞",
+      "id": "LL890123478",
+      "dob": "1967-08-16",
+      "phone": "0944-012-345",
+      "address": "台中市大甲區光明路三段927号",
+      "emergency_contact": "林建志 (夫) 0933-555-666"
+    },
+    "visit_date": "2024-10-28",
+    "department": "婦科腫瘤",
+    "chief_complaint": "停經後陰道出血，持續2個月",
+    "hpi": "57歲女性，停經7年。2個月前無誘因出現陰道少量出血，時有時無，無腹痛，無異常分泌物。",
+    "pmh": ["高血壓", "肥胖（BMI 32）"],
+    "medications": [
+      {"name": "Losartan", "dose": "50mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "142/88 mmHg", "hr": "76 bpm", "rr": "15/min", "temp": "36.6°C", "spo2": "99%"},
+    "labs": {
+      "CA125": "28 U/mL（正常）",
+      "endometrial_biopsy": "待病理報告"
+    },
+    "imaging": "骨盆腔超音波：子宮內膜厚度18mm（停經後>4mm需評估），回音不均。MRI骨盆腔：子宮內膜增厚，局部侵犯肌層<50%，無附件及淋巴結異常。",
+    "assessment": "子宮內膜癌（高度懷疑），停經後出血",
+    "plan": "子宮內膜切片確診。手術：全子宮 + 雙側輸卵管卵巢切除術 + 骨盆腔淋巴結採樣（腹腔鏡）。",
+    "outcome": "病理：子宮內膜樣腺癌，Grade 1，肌層侵犯<50%，淋巴結陰性（0/12）。分期：FIGO IA期。無須輔助治療，定期追蹤。",
+    "follow_up": "術後每3個月婦科追蹤×2年，後每6個月。"
+  },
+  {
+    "record_id": "MR-2024-039",
+    "patient": {
+      "name": "王志宏",
+      "id": "MM901234589",
+      "dob": "1980-05-04",
+      "phone": "0977-123-456",
+      "address": "台中市南屯區公益路三段138号",
+      "emergency_contact": "王秀蘭 (母) 0966-777-888"
+    },
+    "visit_date": "2024-11-05",
+    "department": "急診",
+    "chief_complaint": "突發性右腰部劇烈絞痛，放射至鼠蹊部，血尿",
+    "hpi": "44歲男性，突然右側腰部刀割般絞痛，向右鼠蹊及睪丸放射，噁心嘔吐，肉眼血尿，輾轉難安，坐臥不寧。",
+    "pmh": ["腎結石病史（8年前自行排出）"],
+    "medications": [],
+    "vitals": {"bp": "155/98 mmHg（疼痛性）", "hr": "112 bpm", "rr": "20/min", "temp": "37.0°C", "spo2": "98%"},
+    "labs": {
+      "urine_analysis": "RBC >100/HPF, WBC 5/HPF",
+      "creatinine": "1.0 mg/dL",
+      "uric_acid": "7.8 mg/dL (↑)",
+      "calcium": "10.8 mg/dL（正常上限）",
+      "CBC": "正常，無感染跡象"
+    },
+    "imaging": "腹部CT（無顯影劑）：右側輸尿管中段結石（7×5mm），合併右側腎盂積水（中度）。",
+    "assessment": "右側輸尿管結石（7mm），腎絞痛，中度腎盂積水",
+    "plan": "Ketorolac 30mg IV（止痛）。Tamsulosin 0.4mg QD（幫助排石）。大量飲水。結石成分分析（排出後收集）。若4週無法自行排出或積水加重，考慮ESWL或輸尿管鏡碎石術。",
+    "outcome": "3週後複查X光：結石已排出（患者回報排石時有明顯排石感）。尿液鈣草酸鹽結石。飲食建議：低草酸、增加飲水量至每日3公升。",
+    "follow_up": "3個月後超音波追蹤腎臟，代謝評估（高草酸尿症排除）。"
+  },
+  {
+    "record_id": "MR-2024-040",
+    "patient": {
+      "name": "陳素珍",
+      "id": "NN012345690",
+      "dob": "1958-12-21",
+      "phone": "0955-234-567",
+      "address": "台中市西區民生路一段249号",
+      "emergency_contact": "陳建宏 (子) 0944-999-000"
+    },
+    "visit_date": "2024-11-12",
+    "department": "風濕免疫科",
+    "chief_complaint": "雙手指尖潰瘍、雷諾現象、皮膚變硬、吞嚥困難",
+    "hpi": "66歲女性，10年前開始出現遇冷手指變色（白→藍→紅），近3年皮膚漸進性增厚（手、面部、前胸）、手指潰瘍難癒合、吞嚥固體食物困難、氣短。",
+    "pmh": ["胃食道逆流"],
+    "medications": [
+      {"name": "Omeprazole", "dose": "20mg", "frequency": "BID"}
+    ],
+    "vitals": {"bp": "138/85 mmHg", "hr": "84 bpm", "rr": "18/min", "temp": "36.5°C", "spo2": "92%（room air）"},
+    "labs": {
+      "ANA": "1:320 nucleolar pattern",
+      "anti_Scl70": "陽性（anti-topoisomerase I）",
+      "anti_centromere": "陰性",
+      "NT_proBNP": "485 pg/mL (↑)",
+      "creatinine": "1.1 mg/dL"
+    },
+    "imaging": "HRCT胸部：雙肺下葉蜂巢狀變化及磨玻璃樣陰影（UIP型間質性肺炎）。心臟超音波：估計肺動脈壓55 mmHg（重度肺高壓）。食道吞嚥攝影：食道蠕動消失（下2/3）。甲褶微血管鏡：巨大毛細血管及空白區（Scleroderma pattern）。",
+    "assessment": "全身性硬皮病（Systemic Sclerosis，瀰漫型），合併間質性肺炎及肺高壓",
+    "plan": "ILD治療：Nintedanib（抗纖維化）。肺高壓：Ambrisentan（ERA）+ Tadalafil（PDE5i）。雷諾現象：Nifedipine，指尖潰瘍：Iloprost IV（嚴重時）。GI：繼續PPI + Metoclopramide。",
+    "outcome": "3個月後SpO2改善至95%，肺壓降至42 mmHg。指尖潰瘍癒合。繼續多科合作治療。",
+    "follow_up": "每3個月肺功能及心臟超音波，每年HRCT。"
+  },
+  {
+    "record_id": "MR-2024-041",
+    "patient": {
+      "name": "許明德",
+      "id": "OO123456791",
+      "dob": "1955-07-07",
+      "phone": "0922-345-678",
+      "address": "台中市東區進化路二段360号",
+      "emergency_contact": "許秀芳 (妻) 0988-111-222"
+    },
+    "visit_date": "2024-11-20",
+    "department": "骨科",
+    "chief_complaint": "雙膝疼痛、上下樓梯困難，漸進性加重5年",
+    "hpi": "69歲男性，體重88kg，BMI 29.5。雙膝關節疼痛5年，以右膝為著，上下樓梯、蹲踞時明顯，晨間僵硬約30分鐘，X光已有明顯病變，保守治療效果不佳。",
+    "pmh": ["高血壓", "高血脂", "右膝舊傷（30年前）"],
+    "medications": [
+      {"name": "Celecoxib", "dose": "200mg", "frequency": "QD"},
+      {"name": "Amlodipine", "dose": "5mg", "frequency": "QD"},
+      {"name": "Atorvastatin", "dose": "20mg", "frequency": "QN"}
+    ],
+    "vitals": {"bp": "145/88 mmHg", "hr": "76 bpm", "rr": "14/min", "temp": "36.7°C", "spo2": "98%"},
+    "labs": {
+      "CBC": "正常",
+      "CRP": "8 mg/L（輕度升高）",
+      "RF": "陰性",
+      "uric_acid": "6.2 mg/dL（正常）"
+    },
+    "imaging": "雙膝X光：右膝內側關節間隙幾乎消失（Grade 4 KL），骨刺明顯，力線外翻。左膝Grade 2-3。",
+    "assessment": "雙膝退化性關節炎（右膝嚴重，Grade 4；左膝中度），手術適應症",
+    "plan": "右膝全人工膝關節置換術（Total Knee Arthroplasty, TKA）。術前心肺評估。術後積極復健。左膝繼續保守治療（Hyaluronic acid注射）。",
+    "outcome": "右膝TKA手術成功。術後6週可無支撐行走，疼痛視覺類比量表從8/10降至2/10。術後3個月恢復正常日常活動。",
+    "follow_up": "術後6週、3個月、1年骨科追蹤，評估左膝手術時機。"
+  },
+  {
+    "record_id": "MR-2024-042",
+    "patient": {
+      "name": "張秀琴",
+      "id": "PP234567812",
+      "dob": "1987-03-19",
+      "phone": "0966-456-789",
+      "address": "台中市南屯區文心路三段471号",
+      "emergency_contact": "張建國 (夫) 0911-333-444"
+    },
+    "visit_date": "2024-11-28",
+    "department": "耳鼻喉科",
+    "chief_complaint": "突發性左耳全聾、耳鳴、頭暈",
+    "hpi": "37歲女性，早上起床後突然發現左耳完全聽不到，伴隨高頻耳鳴及輕微頭暈（非旋轉性），否認外傷或感染。",
+    "pmh": ["無"],
+    "medications": [],
+    "vitals": {"bp": "122/78 mmHg", "hr": "78 bpm", "rr": "15/min", "temp": "36.6°C", "spo2": "99%"},
+    "labs": {
+      "CBC": "正常",
+      "ESR": "25 mm/hr",
+      "autoimmune_panel": "陰性",
+      "viral_serology": "CMV IgM陰性、HSV陰性"
+    },
+    "imaging": "純音聽力測驗：左耳全頻率重度至極重度感音神經性聽損（PTA 85 dB）。MRI內耳道：無佔位病變，無聽神經瘤。",
+    "assessment": "突發性感音神經性聽損（左耳，特發性）",
+    "plan": "緊急治療（72小時內）：高劑量系統性類固醇（Prednisolone 60mg QD × 7天後漸減）。鼓室內類固醇注射（Dexamethasone）×3次。高壓氧治療（評估中）。Betahistine（耳鳴及頭暈）。",
+    "outcome": "治療2週後左耳聽力部分恢復（PTA 45 dB，低頻改善較多）。耳鳴持續但較輕。繼續類固醇減量及後續追蹤。",
+    "follow_up": "每月聽力測驗×6個月，評估助聽器需求。"
+  },
+  {
+    "record_id": "MR-2024-043",
+    "patient": {
+      "name": "吳文政",
+      "id": "QQ345678923",
+      "dob": "1959-10-15",
+      "phone": "0933-567-890",
+      "address": "台中市豐原區中正路三段582号",
+      "emergency_contact": "吳秀蘭 (妻) 0977-555-666"
+    },
+    "visit_date": "2024-12-05",
+    "department": "泌尿科腫瘤",
+    "chief_complaint": "無痛性肉眼血尿，間歇性",
+    "hpi": "65歲男性，重度吸菸史（1.5包/天×40年），近3個月間歇性無痛性肉眼血尿，尿急感增加，無腰痛，無排尿困難。",
+    "pmh": ["高血壓", "慢性阻塞性肺病"],
+    "medications": [
+      {"name": "Amlodipine", "dose": "5mg", "frequency": "QD"},
+      {"name": "Salbutamol（吸入）", "dose": "100mcg", "frequency": "PRN"}
+    ],
+    "vitals": {"bp": "148/92 mmHg", "hr": "82 bpm", "rr": "18/min", "temp": "36.8°C", "spo2": "94%"},
+    "labs": {
+      "urine_analysis": "RBC >50/HPF, 無感染",
+      "urine_cytology": "惡性細胞（高度懷疑尿路上皮癌）",
+      "creatinine": "1.3 mg/dL",
+      "CBC": "Hb 10.8 g/dL（輕度貧血）"
+    },
+    "imaging": "膀胱鏡：膀胱右後壁廣基菜花狀腫瘤（3×2.5cm）及多處衛星病灶。CT泌尿道攝影：膀胱腫瘤，無上泌尿道病變，無淋巴結腫大。",
+    "assessment": "膀胱尿路上皮癌（高度懷疑肌肉浸潤性，需病理確認）",
+    "plan": "TURBT（膀胱鏡下腫瘤切除術）＋病理分期。若確認肌肉浸潤性（T2以上）：新輔助化療（Gemcitabine + Cisplatin）後根治性膀胱切除術。",
+    "outcome": "TURBT病理：高惡性度尿路上皮癌，肌肉浸潤（T2b）。新輔助化療3個週期後根治性膀胱切除術 + 迴腸膀胱造口術（ileal conduit）。邊緣陰性，淋巴結陰性（0/22）。",
+    "follow_up": "每3個月CT追蹤×2年，後每6個月。"
+  },
+  {
+    "record_id": "MR-2024-044",
+    "patient": {
+      "name": "鄭美鈴",
+      "id": "RR456789034",
+      "dob": "1994-06-27",
+      "phone": "0944-678-901",
+      "address": "台中市西區民權路二段693号",
+      "emergency_contact": "鄭建明 (父) 0933-777-888"
+    },
+    "visit_date": "2024-12-12",
+    "department": "新陳代謝科",
+    "chief_complaint": "噁心嘔吐、多尿多渴、腹痛、意識混亂",
+    "hpi": "30歲女性，第一型糖尿病（15年），近3天因感冒未調整胰島素劑量，今日嚴重噁心嘔吐、腹痛、呼吸急促，由家人送急診，意識稍混亂。",
+    "pmh": ["第一型糖尿病", "甲狀腺機能低下"],
+    "medications": [
+      {"name": "Insulin Glargine", "dose": "20 units", "frequency": "QN"},
+      {"name": "Insulin Aspart", "dose": "依血糖調整", "frequency": "TID（餐前）"},
+      {"name": "Levothyroxine", "dose": "75mcg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "98/62 mmHg", "hr": "125 bpm", "rr": "28/min（Kussmaul呼吸）", "temp": "37.8°C（感染）", "spo2": "98%"},
+    "labs": {
+      "glucose": "485 mg/dL (↑↑)",
+      "pH": "7.12 (↓↓)",
+      "HCO3": "8 mEq/L (↓↓)",
+      "anion_gap": "28（↑，AG型代謝性酸中毒）",
+      "ketone_blood": "6.8 mmol/L (↑↑)",
+      "K": "5.2 mEq/L（初始正常，胰島素治療後需嚴密監測）",
+      "Na": "131 mEq/L (↓)",
+      "creatinine": "1.8 mg/dL（脫水）"
+    },
+    "imaging": "胸部X光：無肺炎。",
+    "assessment": "糖尿病酮酸中毒（DKA），誘因：感染（上呼吸道感染）",
+    "plan": "ICU收治。IV fluid（Normal saline 1L/hr × 2hr，後依血糖調整）。Regular insulin IV drip（0.1 unit/kg/hr）。K補充（血K<5.5才給胰島素）。每小時監測血糖及電解質。血糖<250時加入葡萄糖溶液。",
+    "outcome": "12小時後pH 7.32，AG正常，血糖185 mg/dL。24小時完全糾正。轉一般病房，改回皮下胰島素。糖尿病衛教：生病期間胰島素調整原則（sick day rules）。",
+    "follow_up": "出院後1週內分泌科追蹤，CGM（連續血糖監測）評估。"
+  },
+  {
+    "record_id": "MR-2024-045",
+    "patient": {
+      "name": "劉建明",
+      "id": "SS567890145",
+      "dob": "1972-02-18",
+      "phone": "0977-789-012",
+      "address": "台中市太平區中興路二段804号",
+      "emergency_contact": "劉美珍 (妻) 0911-999-000"
+    },
+    "visit_date": "2024-12-18",
+    "department": "胸腔科",
+    "chief_complaint": "反覆呼吸困難、慢性咳嗽、痰多，急性加重",
+    "hpi": "52歲男性，重度吸菸（2包/天×30年），已知COPD（每年肺功能追蹤中）。近1週咳嗽加劇，痰量增加（黃綠色），呼吸困難明顯惡化，日常活動受限。",
+    "pmh": ["COPD（Gold GRADE C）", "高血壓"],
+    "medications": [
+      {"name": "Umeclidinium/Vilanterol（吸入，LAMA/LABA）", "dose": "62.5/25mcg", "frequency": "QD"},
+      {"name": "Fluticasone/Salmeterol（吸入，ICS/LABA）", "dose": "250/25mcg", "frequency": "BID"},
+      {"name": "Amlodipine", "dose": "10mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "148/92 mmHg", "hr": "105 bpm", "rr": "28/min", "temp": "38.2°C", "spo2": "85%（room air）"},
+    "labs": {
+      "ABG": "pH 7.31, PaCO2 65 mmHg (↑), PaO2 45 mmHg (↓), HCO3 32 mEq/L (↑)（慢性CO2滯留合併急性惡化）",
+      "WBC": "16,500/μL (↑)",
+      "CRP": "115 mg/L (↑)",
+      "procalcitonin": "0.85 ng/mL (↑)",
+      "sputum_gram": "革蘭氏陰性菌"
+    },
+    "imaging": "胸部X光：肺過度充氣，無新增浸潤。",
+    "assessment": "COPD急性惡化（感染性誘發），II型呼吸衰竭（高碳酸血症）",
+    "plan": "無創正壓呼吸輔助（BiPAP：IPAP 14, EPAP 5）。Controlled oxygen therapy（目標SpO2 88-92%）。抗生素：Levofloxacin 500mg IV QD。Systemic steroid：Methylprednisolone 40mg IV QD × 5天。加強支氣管擴張劑（nebulization）。",
+    "outcome": "BiPAP治療後6小時pH 7.38, PaCO2 52 mmHg，SpO2 91%。避免氣管插管。5天後改口服藥物出院。",
+    "follow_up": "出院後1個月肺功能評估，戒菸治療，肺復健計畫。"
+  },
+  {
+    "record_id": "MR-2024-046",
+    "patient": {
+      "name": "方雅玲",
+      "id": "TT678901256",
+      "dob": "1981-09-06",
+      "phone": "0955-890-123",
+      "address": "台中市北區進化路三段915号",
+      "emergency_contact": "方建宏 (夫) 0922-111-222"
+    },
+    "visit_date": "2024-12-25",
+    "department": "腸胃外科",
+    "chief_complaint": "突發性全腹劇痛、腹壁硬如板狀、噁心嘔吐",
+    "hpi": "43歲女性，長期消化性潰瘍病史（未規則服藥）。今日中午飯後突然全腹劇烈疼痛，腹壁僵硬，噁心嘔吐，無法站直，由救護車送急診。",
+    "pmh": ["消化性潰瘍", "長期NSAIDs使用（關節痛）"],
+    "medications": [
+      {"name": "Ibuprofen", "dose": "400mg", "frequency": "TID（不規則使用）"}
+    ],
+    "vitals": {"bp": "100/65 mmHg", "hr": "122 bpm", "rr": "24/min", "temp": "37.5°C", "spo2": "97%"},
+    "labs": {
+      "WBC": "18,500/μL (↑)",
+      "CRP": "185 mg/L (↑)",
+      "amylase": "145 U/L（輕度↑）",
+      "lactate": "3.5 mmol/L (↑)",
+      "Hb": "11.8 g/dL"
+    },
+    "imaging": "腹部直立X光：橫膈下游離氣體（pneumoperitoneum），符合消化道穿孔。腹部CT：胃十二指腸穿孔，腹腔游離氣體及積液。",
+    "assessment": "消化性潰瘍穿孔，瀰漫性腹膜炎",
+    "plan": "緊急手術。IV fluid resuscitation。廣效抗生素（Ceftriaxone + Metronidazole）。緊急腹腔鏡探查：穿孔修補（Graham patch repair）+ 腹腔沖洗引流。",
+    "outcome": "腹腔鏡手術：十二指腸球部1cm穿孔，Graham patch修補成功。術後PPI 80mg IV drip × 72小時。術後4天出院，改為口服PPI。",
+    "follow_up": "4週後胃鏡複查確認癒合，H. pylori根除治療，停用NSAIDs，改用COX-2抑制劑+PPI保護。"
+  },
+  {
+    "record_id": "MR-2024-047",
+    "patient": {
+      "name": "陳建華",
+      "id": "UU789012367",
+      "dob": "1966-01-23",
+      "phone": "0944-901-234",
+      "address": "台中市清水區光明街二段26号",
+      "emergency_contact": "陳秀珍 (妻) 0988-333-444"
+    },
+    "visit_date": "2025-01-08",
+    "department": "心臟科",
+    "chief_complaint": "反覆暈厥、心跳過慢、疲倦",
+    "hpi": "58歲男性，近4個月多次突然暈厥（每次數十秒，無前驅症狀），心跳紀錄最慢38次/分，嚴重疲倦，活動耐受度差，Holter監測發現多次長Pause。",
+    "pmh": ["高血壓", "冠狀動脈疾病（5年前PCI）"],
+    "medications": [
+      {"name": "Metoprolol", "dose": "50mg", "frequency": "BID"},
+      {"name": "Aspirin", "dose": "100mg", "frequency": "QD"},
+      {"name": "Atorvastatin", "dose": "40mg", "frequency": "QN"}
+    ],
+    "vitals": {"bp": "132/82 mmHg", "hr": "42 bpm", "rr": "14/min", "temp": "36.7°C", "spo2": "97%"},
+    "labs": {
+      "troponin": "0.06 ng/mL（正常）",
+      "TSH": "2.1 mIU/L（正常）",
+      "electrolytes": "正常",
+      "CBC": "正常"
+    },
+    "imaging": "心電圖：竇性心搏過緩，HR 42，偶發竇房阻滯。Holter（24小時）：多次>3秒長Pause（最長5.8秒），與症狀相關。心臟超音波：EF 55%，無新發生壁運動異常。",
+    "assessment": "症狀性竇房結功能障礙（Sick Sinus Syndrome），心臟傳導疾病",
+    "plan": "停用Metoprolol（致病因素之一）。評估永久性心臟節律器植入（Pacemaker）適應症明確（ACC/AHA Class I）。雙腔心律調節器（DDD型）植入。",
+    "outcome": "DDD型心律調節器成功植入（右房及右室電極）。術後心跳規則60-80次/分，暈厥症狀消失。術後追蹤1週設定調整。",
+    "follow_up": "術後1個月、3個月起搏器程控，每年定期追蹤電池壽命及程控。"
+  },
+  {
+    "record_id": "MR-2024-048",
+    "patient": {
+      "name": "林秀蘭",
+      "id": "VV890123478",
+      "dob": "1976-04-30",
+      "phone": "0933-012-345",
+      "address": "台中市梧棲區大智路一段137号",
+      "emergency_contact": "林建明 (夫) 0977-555-666"
+    },
+    "visit_date": "2025-01-15",
+    "department": "腎臟科",
+    "chief_complaint": "全身水腫、泡沫尿、尿量減少，漸進性加重",
+    "hpi": "49歲女性，有第二型糖尿病（控制不佳）病史12年。近3個月全身浮腫（眼瞼、下肢），尿液泡沫多，尿量減少，血壓難以控制。",
+    "pmh": ["第二型糖尿病", "高血壓"],
+    "medications": [
+      {"name": "Metformin", "dose": "1000mg", "frequency": "BID"},
+      {"name": "Glimepiride", "dose": "4mg", "frequency": "QD"},
+      {"name": "Amlodipine", "dose": "10mg", "frequency": "QD"},
+      {"name": "Losartan", "dose": "100mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "168/105 mmHg", "hr": "88 bpm", "rr": "18/min", "temp": "36.6°C", "spo2": "97%"},
+    "labs": {
+      "creatinine": "3.8 mg/dL (↑)",
+      "eGFR": "16 mL/min/1.73m²",
+      "urine_protein_creatinine_ratio": "8500 mg/g (↑↑)",
+      "albumin": "2.5 g/dL (↓)",
+      "HbA1c": "10.2% (↑)",
+      "Hb": "9.2 g/dL (↓，腎性貧血）",
+      "K": "5.9 mEq/L (↑)"
+    },
+    "imaging": "腎臟超音波：雙側腎臟體積縮小（右8.0cm，左7.8cm），回音增強，腎臟切片（若eGFR允許）評估中。",
+    "assessment": "糖尿病腎病變（Diabetic Nephropathy），CKD Stage 4，腎病症候群，高鉀血症",
+    "plan": "停Metformin（eGFR<30禁忌）。加入SGLT2抑制劑（Empagliflozin，腎保護）及Finerenone（MRA，降蛋白尿）。血壓控制加強（目標<130/80）。飲食：低鉀、低磷、低蛋白。高鉀血症：Patiromer（K結合劑）。腎臟替代療法準備。",
+    "outcome": "3個月後urine PCR降至5200 mg/g，K 5.1 mEq/L，血壓135/82 mmHg。eGFR稍改善至19。繼續追蹤。",
+    "follow_up": "每月腎功能，動靜脈廔管評估，透析教育。"
+  },
+  {
+    "record_id": "MR-2024-049",
+    "patient": {
+      "name": "黃志忠",
+      "id": "WW901234589",
+      "dob": "1949-06-12",
+      "phone": "0966-123-456",
+      "address": "台中市豐原區豐原大道三段448号",
+      "emergency_contact": "黃建國 (子) 0922-777-888"
+    },
+    "visit_date": "2025-01-22",
+    "department": "神經科",
+    "chief_complaint": "記憶力明顯退化、迷路、個性改變，1年多",
+    "hpi": "75歲男性，退休教師。家屬觀察近1年半記憶力明顯退化（重複問相同問題、忘記剛發生的事）、在熟悉地方迷路、個性變得多疑、偶有幻視、日常活動需要協助。",
+    "pmh": ["高血壓", "高血脂"],
+    "medications": [
+      {"name": "Amlodipine", "dose": "5mg", "frequency": "QD"},
+      {"name": "Atorvastatin", "dose": "20mg", "frequency": "QN"}
+    ],
+    "vitals": {"bp": "145/88 mmHg", "hr": "76 bpm", "rr": "14/min", "temp": "36.7°C", "spo2": "98%"},
+    "labs": {
+      "CBC": "正常",
+      "thyroid": "正常",
+      "vitamin_B12": "312 pg/mL（低正常）",
+      "MMSE": "16/30（輕至中度認知障礙）",
+      "MoCA": "13/30",
+      "CSF_amyloid_beta42": "降低",
+      "CSF_tau": "升高",
+      "CSF_phospho_tau": "升高"
+    },
+    "imaging": "腦部MRI：雙側海馬迴及顳頂葉萎縮，無大血管病變。FDG-PET：雙側顳頂葉低代謝。Amyloid PET：廣泛Amyloid沉積（陽性）。",
+    "assessment": "阿茲海默症（Alzheimer's Disease），中度，NIA-AA criteria符合",
+    "plan": "Donepezil 5mg QD（4週後加量至10mg）。Memantine 5mg QD（漸加至20mg）。家屬衛教及照護資源提供。跌倒預防。日間活動安排。評估Lecanemab（若符合適應症）。",
+    "outcome": "藥物耐受良好，認知功能穩定（未快速惡化）。家屬加入支持團體。6個月後MMSE 14/30（輕度退步）。",
+    "follow_up": "每6個月神經科認知評估，年度影像追蹤。"
+  },
+  {
+    "record_id": "MR-2024-050",
+    "patient": {
+      "name": "吳淑美",
+      "id": "XX012345690",
+      "dob": "1990-08-08",
+      "phone": "0988-234-567",
+      "address": "台中市西屯區台灣大道四段559号",
+      "emergency_contact": "吳建宏 (夫) 0944-111-222"
+    },
+    "visit_date": "2025-01-28",
+    "department": "免疫風濕科",
+    "chief_complaint": "雙膝關節紅腫熱痛，急性發作，反覆4年",
+    "hpi": "35歲女性，4年來反覆雙膝及第一蹠趾關節急性紅腫熱痛，每次持續1-2週後緩解，近1年發作頻率增加（每2個月1次），本次右膝急性紅腫發作3天。飲食習慣：喜愛海鮮及啤酒。",
+    "pmh": ["高血壓（輕度）"],
+    "medications": [
+      {"name": "Losartan", "dose": "25mg", "frequency": "QD"}
+    ],
+    "vitals": {"bp": "138/86 mmHg", "hr": "88 bpm", "rr": "16/min", "temp": "37.5°C", "spo2": "99%"},
+    "labs": {
+      "uric_acid": "9.8 mg/dL (↑↑)",
+      "CRP": "65 mg/L (↑)",
+      "ESR": "72 mm/hr (↑)",
+      "RF": "陰性",
+      "CBC": "WBC 12,500/μL (↑輕度)",
+      "creatinine": "0.9 mg/dL",
+      "synovial_fluid": "WBC 45,000/μL，尿酸鹽結晶（雙折射性針狀結晶），培養陰性"
+    },
+    "imaging": "右膝X光：輕度軟組織腫脹，無痛風石，關節間隙保留。超音波：雙輪廓徵（double contour sign），滑膜炎。",
+    "assessment": "痛風性關節炎（急性發作），慢性痛風（高尿酸血症）",
+    "plan": "急性期：Colchicine 0.5mg BID（7天）。局部Triamcinolone關節內注射。急性緩解後（>2週）開始降尿酸：Febuxostat 40mg QD（目標尿酸<6 mg/dL）。換降壓藥（Losartan可以保留，有輕度降尿酸效果）。飲食衛教：減少內臟、海鮮、酒精，增加水分。",
+    "outcome": "3天後關節腫痛明顯改善。Febuxostat開始後3個月尿酸降至5.5 mg/dL，無急性發作。",
+    "follow_up": "每3個月尿酸監測，持續降尿酸治療至少2年。"
+  }
+]
