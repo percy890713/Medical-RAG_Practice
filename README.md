@@ -64,21 +64,7 @@ FastAPI + HTML 呈現結果（附信心分數 + 來源依據 + 查詢紀錄）
 
 ## 啟動方式
 
-有兩種方式，**互相獨立**，依需求選一種：
-
-| | 本機直接跑 | Docker + Ollama |
-|---|---|---|
-| LLM | HuggingFace Llama-3.2（本地載入） | Ollama（獨立服務） |
-| 需要 GPU | 建議有（4-bit 量化） | 不需要 |
-| 關掉 terminal | 程式停止 | 繼續背景執行 |
-| 安裝複雜度 | 需裝 PyTorch + CUDA | 需裝 Docker Desktop |
-| requirements | `requirements.txt` | `requirements_ollama.txt` |
-
----
-
-### 方式一：本機直接跑
-
-使用 HuggingFace 直接載入 Llama-3.2，不需要 Ollama。
+使用 HuggingFace 直接載入 Llama-3.2，完全離線運行。
 
 #### 前置需求
 - Python 3.10+、CUDA GPU（建議 VRAM ≥ 3GB）
@@ -105,59 +91,6 @@ python scripts/build_index.py
 
 # 6. 啟動 app
 python app.py
-```
-
----
-
-### 方式二：Docker + Ollama
-
-不需要 GPU，關掉 terminal 後繼續背景執行，重開機自動重啟。
-
-#### 前置需求
-- 安裝並**開啟 Docker Desktop**（等系統匣鯨魚 icon 靜止才算就緒）
-
-#### 第一次啟動
-
-```powershell
-# 1. 啟動所有服務（背景執行）
-#    ollama-setup 會自動下載 llama3.2，需要一些時間
-docker-compose up -d
-
-# 2. 確認狀態（rag-app 和 ollama 應為 running，ollama-setup 為 Exit 0 正常）
-docker-compose ps
-
-# 3. 建立向量索引（只需要做一次）
-docker-compose exec rag-app python scripts/build_index.py
-```
-
-#### 之後每次啟動
-
-```powershell
-docker-compose up -d
-```
-
-#### 停止
-
-```powershell
-docker-compose down
-```
-
-#### 查看 log
-
-```powershell
-docker-compose logs -f rag-app
-```
-
-#### 換模型
-
-修改 `docker-compose.yml` 中的 `OLLAMA_MODEL`，再重啟：
-
-```yaml
-- OLLAMA_MODEL=qwen2.5
-```
-
-```powershell
-docker-compose down && docker-compose up -d
 ```
 
 ---
@@ -290,7 +223,6 @@ medical_rag/
 | `query` | 原始查詢文字 |
 | `confidence` | HIGH / MEDIUM / LOW |
 | `retrieval_score` | 最高 cosine similarity |
-| `phi_detected` | 是否偵測到輸入端 PHI |
 | `warnings_count` | 警示訊息數量 |
 | `requires_review` | 是否建議人工確認 |
 
