@@ -20,8 +20,8 @@ class MedicalChunker:
         record_id = record.get('record_id', record.get('id', 'unknown'))
         department = record.get('department', '')
         visit_date = record.get('visit_date', '')
-        # 只保留年份避免重識別
-        visit_year = visit_date[:4] if visit_date and len(visit_date) >= 4 else visit_date
+        # build_index 會預先存好 visit_year（避免 visit_date 被 deidentifier 換成 [DOB]）
+        visit_year = record.get('visit_year') or (visit_date[:4] if len(visit_date) >= 4 else visit_date)
 
         base_metadata = {
             'record_id': record_id,

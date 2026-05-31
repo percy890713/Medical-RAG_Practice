@@ -37,7 +37,13 @@ def main():
     # 2. 去識別化
     print('[2/6] 執行去識別化...')
     deidentifier = MedicalDeidentifier()
-    deidentified = [deidentifier.deidentify_record(r) for r in records]
+    deidentified = []
+    for r in records:
+        d = deidentifier.deidentify_record(r)
+        # visit_date 會被 deidentifier 換成 [DOB]，先把年份存回來
+        raw_date = r.get('visit_date', '')
+        d['visit_year'] = raw_date[:4] if raw_date and len(raw_date) >= 4 else ''
+        deidentified.append(d)
 
     # 3. Chunking
     print('[3/6] 執行章節切割...')

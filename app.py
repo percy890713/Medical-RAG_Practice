@@ -75,7 +75,7 @@ def format_cases(cases: list) -> list:
 @app.get('/', response_class=HTMLResponse)
 async def index(request: Request):
     return templates.TemplateResponse(
-        'index.html', {'request': request, 'examples': _EXAMPLES}
+        request=request, name='index.html', context={'examples': _EXAMPLES}
     )
 
 
@@ -137,7 +137,7 @@ async def logs_page(request: Request):
                         pass
     entries.reverse()  # 最新在前
     return templates.TemplateResponse(
-        'logs.html', {'request': request, 'entries': entries}
+        request=request, name='logs.html', context={'entries': entries}
     )
 
 
