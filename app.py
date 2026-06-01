@@ -120,6 +120,8 @@ async def query_endpoint(body: QueryRequest):
         'answer': result.get('answer', ''),
         'retrieved_cases': format_cases(result.get('retrieved_cases', [])),
         'warnings': warnings,
+        'retrieval_score': round(float(result.get('retrieval_score', 0)), 4),
+        'faithfulness_score': round(float(result.get('faithfulness_score', 0)), 4),
     }
 
 

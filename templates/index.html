@@ -133,6 +133,27 @@
       min-height: 28px;
       color: #3f3f46;
     }
+    .score-row {
+      display: flex;
+      gap: 24px;
+      margin-top: 10px;
+    }
+    .score-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .score-label {
+      font-size: 0.72rem;
+      color: #71717a;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .score-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #3f3f46;
+    }
     .dot {
       width: 12px; height: 12px;
       border-radius: 50%;
@@ -284,6 +305,16 @@
         <span class="dot dot-empty"></span>
         <span id="confidenceText">—</span>
       </div>
+      <div class="score-row" id="scoreRow" style="display:none;">
+        <div class="score-item">
+          <span class="score-label">最高相似度分數</span>
+          <span class="score-value" id="retrievalScoreText">—</span>
+        </div>
+        <div class="score-item">
+          <span class="score-label">Faithfulness</span>
+          <span class="score-value" id="faithfulnessScoreText">—</span>
+        </div>
+      </div>
     </div>
 
     <!-- 主要回答 -->
@@ -361,6 +392,7 @@
       }
 
       setConfidence(data.confidence);
+      setScores(data.retrieval_score, data.faithfulness_score);
       document.getElementById('answerBody').innerHTML =
         marked.parse(data.answer || '');
       renderCases(data.retrieved_cases || []);
@@ -380,6 +412,16 @@
     const text = document.getElementById('confidenceText');
     dot.className = 'dot ' + (CONFIDENCE_MAP[level]?.dotClass ?? 'dot-empty');
     text.textContent = CONFIDENCE_MAP[level]?.label ?? '—';
+  }
+
+  function setScores(retrieval, faithfulness) {
+    const row = document.getElementById('scoreRow');
+    if (retrieval == null && faithfulness == null) { row.style.display = 'none'; return; }
+    document.getElementById('retrievalScoreText').textContent =
+      retrieval != null ? (retrieval * 100).toFixed(1) + '%' : '—';
+    document.getElementById('faithfulnessScoreText').textContent =
+      faithfulness != null ? (faithfulness * 100).toFixed(1) + '%' : '—';
+    row.style.display = 'flex';
   }
 
   function renderCases(cases) {

@@ -95,6 +95,29 @@ python app.py
 
 ---
 
+## 更新推上 GitHub
+
+```powershell
+# 查看哪些檔案有改動
+git status
+
+# 把要上傳的檔案加進去（指定檔案）
+# git add app.py src/pipeline.py
+
+# 或是全部一起加
+git add .
+
+# commit（填寫這次改了什麼）
+git commit -m "說明這次的修改"
+
+# 推上去
+git push origin main
+```
+
+> 如果遠端有別人的更新，先 `git pull origin main` 再 push。
+
+---
+
 ## 目錄結構
 
 ```

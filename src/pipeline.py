@@ -137,6 +137,7 @@ class MedicalRAGPipeline:
             'retrieved_cases': retrieved_cases,
             'confidence': check_result['confidence'],
             'retrieval_score': check_result['retrieval_score'],
+            'faithfulness_score': check_result['faithfulness_score'],
             'warnings': warnings,
             'requires_review': check_result['requires_review'],
             'phi_detected_in_query': phi_detected,
