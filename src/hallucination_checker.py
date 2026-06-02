@@ -1,6 +1,16 @@
 import re
 
 
+# 英文藥名／專有名詞：首字母大寫、長度 >= 4（從 contexts 動態抽取用）
+_ENGLISH_TERM_PATTERN = re.compile(r'\b[A-Z][a-zA-Z]{3,}\b')
+
+# 排除常見非醫療英文大寫詞
+_ENGLISH_STOPWORDS = {
+    'This', 'That', 'These', 'Those', 'With', 'From', 'Also', 'Note',
+    'After', 'Before', 'During', 'According', 'However', 'Please', 'Based',
+    'Each', 'Such', 'When', 'Then', 'They', 'Their', 'Stage', 'Type',
+}
+
 # 醫療關鍵詞（疾病、症狀、藥物、檢查等常見詞彙）
 _MEDICAL_TERMS = [
     # 疾病
@@ -35,7 +45,7 @@ class HallucinationChecker:
     """驗證 LLM 回答是否有依據（信心分級：HIGH / MEDIUM / LOW）"""
 
     def _extract_medical_terms(self, text: str) -> set[str]:
-        """從文字中提取出現的醫療詞彙"""
+        """從文字中提取出現的醫療詞彙（固定清單）"""
         found = set()
         text_lower = text.lower()
         for term in _MEDICAL_TERMS:
@@ -43,18 +53,43 @@ class HallucinationChecker:
                 found.add(term)
         return found
 
-    def _compute_faithfulness(self, answer: str, contexts: list[str]) -> float:
+    def _extract_dynamic_english_terms(self, contexts: list[str]) -> set[str]:
+        """從 contexts 動態抽取英文藥名（首字母大寫、排除常見非醫療詞）"""
+        found = set()
+        for ctx in contexts:
+            for term in _ENGLISH_TERM_PATTERN.findall(ctx):
+                if term not in _ENGLISH_STOPWORDS:
+                    found.add(term)
+        return found
+
+    def _compute_faithfulness(self, query: str, answer: str, contexts: list[str]) -> float:
         """
         計算 faithfulness score：
-        回答中出現在任一 context 的醫療詞彙 / 回答中所有醫療詞彙
+        1. 從固定清單 + contexts 動態抽取的英文藥名，找出回答中出現的詞
+        2. 排除使用者 query 裡已有的詞（避免把 query 症狀誤算為 LLM 主張）
+        3. score = 剩餘詞中出現在 contexts 的比例
         """
+        dynamic_terms = self._extract_dynamic_english_terms(contexts)
+
+        # 回答中出現的醫療詞（固定清單 + 動態英文詞）
         answer_terms = self._extract_medical_terms(answer)
+        for term in dynamic_terms:
+            if term in answer:  # 英文藥名保留大小寫比對
+                answer_terms.add(term)
+
         if not answer_terms:
-            return 1.0  # 無醫療詞彙時不懲罰
+            return 1.0
+
+        # 排除 query 裡已有的詞，只評估 LLM 額外聲稱的內容
+        query_lower = query.lower()
+        extra_terms = {t for t in answer_terms if t.lower() not in query_lower}
+
+        if not extra_terms:
+            return 1.0  # 所有詞都來自 query，無額外主張可評估
 
         combined_context = ' '.join(contexts).lower()
-        supported = sum(1 for t in answer_terms if t.lower() in combined_context)
-        return supported / len(answer_terms)
+        supported = sum(1 for t in extra_terms if t.lower() in combined_context)
+        return supported / len(extra_terms)
 
     def check(
         self,
@@ -74,7 +109,7 @@ class HallucinationChecker:
         }
         """
         top_retrieval_score = max(retrieval_scores) if retrieval_scores else 0.0
-        faithfulness_score = self._compute_faithfulness(answer, retrieved_contexts)
+        faithfulness_score = self._compute_faithfulness(query, answer, retrieved_contexts)
 
         warnings = []
 
