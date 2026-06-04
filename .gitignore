@@ -28,3 +28,6 @@ data/query_log.jsonl
 # OS
 .DS_Store
 Thumbs.db
+
+# 本地筆記
+如果遇到巨量資料的解決方法.md

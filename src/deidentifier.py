@@ -26,7 +26,7 @@ class MedicalDeidentifier:
     )
     # 中文姓名（病患/患者/個案 後面 2-4 字）
     _NAME_CONTEXT_PATTERN = re.compile(
-        r'(?:病患|患者|個案|姓名|病人|個管)[：:\s]*([^\s，。、\n（(【\[]{2,4})'
+        r'(?:病患|患者|個案|姓名|病人|個管)[：:\s]+([^\s，。、\n（(【\[]{2,4})'
     )
 
     def __init__(self):
