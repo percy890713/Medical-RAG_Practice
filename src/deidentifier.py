@@ -24,9 +24,20 @@ class MedicalDeidentifier:
     _EMERGENCY_PATTERN = re.compile(
         r'(?:緊急聯絡人|聯絡人|家屬)[：:]\s*([^\s，。、\n]{2,4})'
     )
-    # 中文姓名（病患/患者/個案 後面 2-4 字）
+    # 中文姓名（病患/患者/個案 後面 2-4 字，有分隔符）
     _NAME_CONTEXT_PATTERN = re.compile(
         r'(?:病患|患者|個案|姓名|病人|個管)[：:\s]+([^\s，。、\n（(【\[]{2,4})'
+    )
+    # 台灣常見姓氏（覆蓋約 90% 人口）
+    _SURNAMES = (
+        '陳林黃張李王吳劉蔡楊許鄭謝洪曾邱廖賴徐周葉'
+        '蘇莊呂江何蕭羅高潘簡朱鍾彭游詹胡施沈余盧梁'
+        '唐薛歐范方宋鄧杜傅侯曹魏丁石孫馬趙馮蔣韓秦'
+        '尤孔嚴華金陶薑戚鄒喻柏竇章雲葛奚袁柳任俞苗'
+    )
+    # 中文姓名（無分隔符，但開頭須為常見姓氏）
+    _NAME_CONTEXT_NO_SEP_PATTERN = re.compile(
+        rf'(?:病患|患者|個案|姓名|病人|個管)([{_SURNAMES}][^\s，。、\n（(【\[{{}}]{{1,3}})'
     )
 
     def __init__(self):
@@ -94,6 +105,7 @@ class MedicalDeidentifier:
             return m.group(0).replace(name, placeholder)
 
         text = self._NAME_CONTEXT_PATTERN.sub(replace_name, text)
+        text = self._NAME_CONTEXT_NO_SEP_PATTERN.sub(replace_name, text)
 
         return text, detected
 
